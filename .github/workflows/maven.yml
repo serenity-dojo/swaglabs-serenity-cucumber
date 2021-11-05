@@ -21,7 +21,6 @@ jobs:
     - name: Build with Maven
       run: mvn -B verify --file pom.xml
 
-  To deploy to Github pages:
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.1
       with:
