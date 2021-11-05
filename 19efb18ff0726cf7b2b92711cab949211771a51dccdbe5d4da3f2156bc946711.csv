@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Browse the catalog","Colin reviews our range of products","SUCCESS","2021-11-05T10:36:48.708614922Z[Etc/UTC]","0.0","16.66"
+"Browse the catalog","Colin views information about each product","SUCCESS","2021-11-05T10:37:06.169590307Z[Etc/UTC]","0.0","5.7"
+"Browse the catalog","Colin views the details for specific products","SUCCESS","2021-11-05T10:37:11.973661115Z[Etc/UTC]","0.0","6.16"
+"Browse the catalog","Sort products","SUCCESS","2021-11-05T10:37:18.197579077Z[Etc/UTC]","0.0","4.48"
