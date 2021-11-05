@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 package swaglabs.actions.state;
-=======
-package starter.actions.state;
->>>>>>> d964fc93779a8cace3a51905fa5f2dcea9287c1a
 
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;

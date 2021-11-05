@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package swaglabs.actions.checkout;
 
 import net.serenitybdd.screenplay.Performable;
@@ -14,7 +13,4 @@ public class Checkout {
                 Click.on(Button.called("Checkout"))
         );
     }
-=======
-package swaglabs.actions.checkout;public class Checkout {
->>>>>>> d964fc93779a8cace3a51905fa5f2dcea9287c1a
 }

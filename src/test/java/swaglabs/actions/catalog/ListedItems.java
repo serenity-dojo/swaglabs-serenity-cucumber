@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 package swaglabs.actions.catalog;
-=======
-package starter.actions.catalog;
->>>>>>> d964fc93779a8cace3a51905fa5f2dcea9287c1a
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
