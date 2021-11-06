@@ -1,4 +1,4 @@
-package swaglabs.actions.state;
+package swaglabs.actions.ui;
 
 import net.serenitybdd.markers.CanBeSilent;
 import net.serenitybdd.screenplay.Actor;
@@ -10,17 +10,17 @@ import java.util.function.Consumer;
 /**
  * Perform an action directly with the Serenity WebDriver API
  */
-public class BrowserTask implements Performable, CanBeSilent {
+public class InTheBrowser implements Performable, CanBeSilent {
 
     private final Consumer<BrowseTheWeb> action;
     private boolean isSilent = false;
 
-    public BrowserTask(Consumer<BrowseTheWeb> action) {
+    public InTheBrowser(Consumer<BrowseTheWeb> action) {
         this.action = action;
     }
 
-    public static BrowserTask perform(Consumer<BrowseTheWeb> action) {
-        return new BrowserTask(action);
+    public static InTheBrowser perform(Consumer<BrowseTheWeb> action) {
+        return new InTheBrowser(action);
     }
 
 

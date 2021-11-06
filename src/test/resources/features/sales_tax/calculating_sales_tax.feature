@@ -9,7 +9,7 @@ Feature: Calculating sales tax
   # NOTE: In a real application this would typically done via API or backend testing, not via the UI
   #
   Rule: Sales tax is calculated as 8% of the purchase price
-    Scenario Outline: Colin purchases two items and sees them both appear in the purchase summary
+    Scenario Outline: Colin sees the correctly calculated sales tax for his order
       Given Colin has added the following item to the cart:
         | <Item> |
       When he checks out his cart providing his personal details
@@ -23,10 +23,11 @@ Feature: Calculating sales tax
 
   Rule: Sales tax is calculated on the total of all purchased items
     Scenario: Colin purchases two items so the total tax calculated includes tax for both items
-      When Colin checks out the following items:
+      Given Colin has the following items in his cart:
         | Qty | Description           | Price  |
         | 1   | Sauce Labs Backpack   | $29.99 |
         | 1   | Sauce Labs Bike Light | $9.99  |
+      When he checks out his cart providing his personal details
       Then the total price should be:
         | Item total | Tax   | Total  |
         | $39.98     | $3.20 | $43.18 |

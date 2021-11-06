@@ -11,9 +11,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <serenity.version>3.0.2</serenity.version>
-        <serenity.maven.version>3.0.2</serenity.maven.version>
-        <serenity.cucumber.version>3.0.2</serenity.cucumber.version>
+        <serenity.version>3.0.3</serenity.version>
+        <serenity.maven.version>3.0.3</serenity.maven.version>
+        <serenity.cucumber.version>3.0.3</serenity.cucumber.version>
         <encoding>UTF-8</encoding>
         <tags></tags>
         <webdriver.base.url></webdriver.base.url>
@@ -79,6 +79,17 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.junit</groupId>
+                <artifactId>junit-bom</artifactId>
+                <version>5.8.1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <build>
         <plugins>
             <plugin>
@@ -98,9 +109,8 @@
                         <include>**/*Suite.java</include>
                     </includes>
                     <parallel>classesAndMethods</parallel>
-                    <threadCount>4</threadCount>
-<!--                    <useUnlimitedThreads>true</useUnlimitedThreads>-->
-                    <forkCount>4</forkCount>
+                    <threadCount>5</threadCount>
+                    <forkCount>5</forkCount>
                     <reuseForks>true</reuseForks>
                 </configuration>
                 <executions>

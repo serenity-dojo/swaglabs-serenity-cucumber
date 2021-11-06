@@ -13,8 +13,10 @@ import net.serenitybdd.screenplay.questions.Text;
 import net.serenitybdd.screenplay.ui.PageElement;
 import swaglabs.actions.cart.AddToCart;
 import swaglabs.actions.cart.RemoveItemFromCart;
+import swaglabs.actions.cart.AShoppingCart;
 import swaglabs.actions.catalog.CatalogPage;
 import swaglabs.actions.checkout.ProvidePersonalDetails;
+import swaglabs.actions.navigation.Navigate;
 import swaglabs.model.CustomerDetails;
 
 import java.util.List;
@@ -55,9 +57,7 @@ public class CartStepDefinitions {
 
     @And("{actor} has added the following item(s) to the cart:")
     public void addedTheFollowingItemsToTheCart(Actor actor, List<String> items) {
-        items.forEach(
-                item -> actor.attemptsTo(AddToCart.item(item))
-        );
+        actor.has(AShoppingCart.containing(items));
     }
 
     @When("{actor} removes {string} from the cart")
@@ -65,8 +65,21 @@ public class CartStepDefinitions {
         actor.attemptsTo(RemoveItemFromCart.called(item));
     }
 
+    /**
+     * Open the shopping cart page directly
+     * @param actor
+     */
     @When("{actor} views his cart")
     public void viewsCart(Actor actor) {
+        actor.attemptsTo(Navigate.toTheShoppingCart());
+    }
+
+    /**
+     * Navigate to the shopping cart via the shopping cart badge
+     * @param actor
+     */
+    @When("{actor} opens the shopping cart")
+    public void opensCart(Actor actor) {
         actor.attemptsTo(Click.on(PageElement.called("shopping_cart_badge")));
     }
 

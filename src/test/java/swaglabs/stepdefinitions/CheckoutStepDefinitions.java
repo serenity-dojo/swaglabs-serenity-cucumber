@@ -8,8 +8,10 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.ensure.SoftlyEnsure;
+import swaglabs.actions.cart.AShoppingCart;
 import swaglabs.actions.cart.AddToCart;
 import swaglabs.actions.checkout.*;
+import swaglabs.actions.navigation.Navigate;
 import swaglabs.model.CheckoutItem;
 import swaglabs.model.CustomerDetails;
 import swaglabs.model.TotalItemPrice;
@@ -47,9 +49,16 @@ public class CheckoutStepDefinitions {
     @When("{actor} checks out his cart providing his personal details")
     public void checksOutWithPersonalDetails(Actor actor) {
         actor.attemptsTo(
-                Checkout.theCurrentItemsInTheCart(),
+                Navigate.toTheCheckoutPage(),
                 ProvidePersonalDetails.of(CustomerDetails.about(actor.getName()))
         );
+
+    }
+
+    @Given("{actor} has the following items in his cart:")
+    public void addItemsToCart(Actor actor, List<CheckoutItem> items) {
+        List<String> itemNames = items.stream().map(CheckoutItem::description).collect(Collectors.toList());
+        actor.has(AShoppingCart.containing(itemNames));
     }
 
     @When("{actor} checks out the following items:")
