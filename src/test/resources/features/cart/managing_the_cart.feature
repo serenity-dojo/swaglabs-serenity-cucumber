@@ -31,7 +31,7 @@ Feature: Managing the cart
   Rule: Customer can remove items from their cart
 
     Example: Colin removes an item from the cart
-      Given Colin has added the following items to the cart:
+      Given Colin has the following item in his cart:
         | Sauce Labs Backpack   |
         | Sauce Labs Bike Light |
       And Colin is browsing the product catalog
@@ -40,14 +40,13 @@ Feature: Managing the cart
 
   Rule: Users can add a product to the cart from the product details
     Example: Colin views the details of a product and adds it to his cart
-      Given Colin is browsing the product catalog
-      And he views the product details for "Sauce Labs Bike Light"
+      Given Colin has opened the product details for "Sauce Labs Bike Light"
       When he adds this item to the cart
       Then the cart item count should be 1
 
   Rule: Users can view the contents of their cart
     Example: Colin adds some items to the cart and reviews his cart contents
-      Given Colin has added the following items to the cart:
+      Given Colin has the following item in his cart:
         | Sauce Labs Backpack   |
         | Sauce Labs Bike Light |
       And he is browsing the product catalog

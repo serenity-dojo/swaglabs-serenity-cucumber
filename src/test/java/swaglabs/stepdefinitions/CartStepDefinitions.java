@@ -26,6 +26,9 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class CartStepDefinitions {
 
+    /**
+     * Add an item on the catalog page to the cart
+     */
     @When("{actor} adds {string} to the cart")
     public void colinAddsToTheCart(Actor actor, String item) {
         actor.attemptsTo(AddToCart.item(item));
@@ -55,7 +58,7 @@ public class CartStepDefinitions {
         );
     }
 
-    @And("{actor} has added the following item(s) to the cart:")
+    @And("{actor} has the following item(s) in his/her cart:")
     public void addedTheFollowingItemsToTheCart(Actor actor, List<String> items) {
         actor.has(AShoppingCart.containing(items));
     }

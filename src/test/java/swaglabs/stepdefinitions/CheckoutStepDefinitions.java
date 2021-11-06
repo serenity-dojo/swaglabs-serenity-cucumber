@@ -46,6 +46,14 @@ public class CheckoutStepDefinitions {
         );
     }
 
+    @When("{actor} completes the checkout")
+    public void completesTheCheckout(Actor actor) {
+        checksOutWithPersonalDetails(actor);
+    }
+
+    /**
+     * Open the checkout page and enter customer personal details
+     */
     @When("{actor} checks out his cart providing his personal details")
     public void checksOutWithPersonalDetails(Actor actor) {
         actor.attemptsTo(
@@ -53,12 +61,6 @@ public class CheckoutStepDefinitions {
                 ProvidePersonalDetails.of(CustomerDetails.about(actor.getName()))
         );
 
-    }
-
-    @Given("{actor} has the following items in his cart:")
-    public void addItemsToCart(Actor actor, List<CheckoutItem> items) {
-        List<String> itemNames = items.stream().map(CheckoutItem::description).collect(Collectors.toList());
-        actor.has(AShoppingCart.containing(itemNames));
     }
 
     @When("{actor} checks out the following items:")
@@ -107,6 +109,9 @@ public class CheckoutStepDefinitions {
         assertThat(displayedItems).containsOnlyElementsOf(expectedItems);
     }
 
+    /**
+     * Check the total price details displayed on the checkout confirmation page
+     */
     @Then("the total price should be:")
     public void totalPriceShouldBe(TotalItemPrice expectedPrices) {
         Actor actor = OnStage.theActorInTheSpotlight();

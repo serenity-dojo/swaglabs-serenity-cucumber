@@ -21,7 +21,7 @@ Feature: Completing a purchase
 
   Rule: Customers should see a summary of their order before they complete their purchase
     Example: Colin purchases two items and sees them both appear in the purchase summary
-      Given Colin has added the following items to the cart:
+      Given Colin has the following items in his cart:
         | Sauce Labs Backpack     |
         | Sauce Labs Bolt T-Shirt |
       When he checks out his cart providing his personal details
@@ -35,7 +35,7 @@ Feature: Completing a purchase
 
   Rule: Customers should be informed that their order has been placed
     Example: Colin confirms his order and is told that the items have been dispatched
-      Given Colin has added the following items to the cart:
+      Given Colin has the following item in his cart:
         | Sauce Labs Backpack     |
         | Sauce Labs Bolt T-Shirt |
       When he checks out his cart providing his personal details

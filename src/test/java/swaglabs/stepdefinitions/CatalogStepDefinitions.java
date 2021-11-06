@@ -7,6 +7,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Open;
+import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.questions.Text;
 import net.serenitybdd.screenplay.ui.*;
@@ -50,6 +51,9 @@ public class CatalogStepDefinitions {
         }
     }
 
+    /**
+     * Open the inventory page
+     */
     @When("{actor} is browsing the product catalog")
     public void browsingTheProductCatalog(Actor actor) {
         actor.attemptsTo(
@@ -57,8 +61,12 @@ public class CatalogStepDefinitions {
         );
     }
 
-    @When("{actor} views the product details for {string}")
-    public void viewProductDetails(Actor actor, String productName) {
+    //
+    // Here we use a regular expression for more flexibility
+    //
+    @When("^(.*) (?:opens|has opened) the product details for \"(.*)\"")
+    public void viewProductDetails(String actorName, String productName) {
+        Actor actor = OnStage.theActorCalled(actorName);
         actor.attemptsTo(
                 Click.on(Link.called(productName))
         );

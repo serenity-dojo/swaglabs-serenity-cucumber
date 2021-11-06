@@ -25,7 +25,7 @@ Feature: Browse the catalog
   Rule: Customer should be able to view product details for a particular product
     Scenario Outline: Colin views the details for specific products
       Given Colin is browsing the product catalog
-      When he views the product details for "<Product Name>"
+      When Colin opens the product details for "<Product Name>"
       Then he should see a product with the following details:
         | Name           | Price   | Description   |
         | <Product Name> | <Price> | <Description> |

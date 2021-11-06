@@ -34,9 +34,11 @@ public class LoginStepDefinitions {
         actor.attemptsTo(Open.url("https://www.saucedemo.com/"));
     }
 
+    /**
+     * Logon to the application if the user is not already logged on
+     */
     @Given("{actor} has logged onto the application")
     public void aRegisteredUser(Actor actor) {
-        System.out.println("  -> Running in thread: " + Thread.currentThread());
         if (!ApplicationPage.PRIMARY_HEADER.isVisibleFor(actor)) {
             actor.attemptsTo(
                     Open.url("https://www.saucedemo.com"),

@@ -10,6 +10,11 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+/**
+ * This class uses Screenplay Facts to manage the customer cart which is stored in the browser local storage.
+ * This allows us to add items to the cart for a customer behind the scene, and remove them automatically at the
+ * end of the test.
+ */
 public class AShoppingCart implements Fact {
 
     private final List<InventoryItem> items;
@@ -30,12 +35,16 @@ public class AShoppingCart implements Fact {
 
     @Override
     public void setup(Actor actor) {
-        String renderedIds = items.stream().map(item -> Integer.toString(item.id)).collect(Collectors.joining(","));
-        BrowseTheWeb.as(actor).evaluateJavascript("window.localStorage.setItem('cart-contents','[" + renderedIds + "]')");
+        BrowseTheWeb.as(actor)
+                    .evaluateJavascript("window.localStorage.setItem('cart-contents','[" + commaSeparatedItemIds() + "]')");
     }
 
     @Override
     public void teardown(Actor actor) {
         BrowseTheWeb.as(actor).evaluateJavascript("window.localStorage.clear()");
+    }
+
+    private String commaSeparatedItemIds() {
+        return items.stream().map(item -> Integer.toString(item.id)).collect(Collectors.joining(","));
     }
 }

@@ -7,6 +7,9 @@ import swaglabs.actions.catalog.CatalogPage;
 
 import java.util.List;
 
+/**
+ * Add one or more items to a cart from the catalog page
+ */
 public class AddToCart {
     public static Performable item(String item) {
         return Click.on(CatalogPage.addToCartButtonFor(item));
