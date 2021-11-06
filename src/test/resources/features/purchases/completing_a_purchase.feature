@@ -3,12 +3,12 @@ Feature: Completing a purchase
 
   Background:
     Given Colin has logged onto the application
-    And Colin is browsing the product catalog
 
   Rule: Customers must provide their name and address during checkout
 
     Scenario Outline: Colin enters incomplete name and address info
-      Given Colin has selected an item and checked out his cart
+      Given Colin is browsing the product catalog
+      And Colin has selected an item and checked out his cart
       When he provides the following personal details:
         | First Name   | Last Name   | Zip/Post Code   |
         | <First Name> | <Last Name> | <Zip/Post Code> |
