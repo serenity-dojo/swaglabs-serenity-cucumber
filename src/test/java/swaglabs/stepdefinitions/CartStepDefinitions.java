@@ -72,6 +72,7 @@ public class CartStepDefinitions {
     @When("{actor} views his cart")
     public void viewsCart(Actor actor) {
         actor.attemptsTo(Navigate.toTheShoppingCart());
+//        actor.attemptsTo(Click.on(PageElement.called("shopping_cart_badge")));
     }
 
     /**
