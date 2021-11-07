@@ -17,6 +17,8 @@
         <encoding>UTF-8</encoding>
         <tags></tags>
         <webdriver.base.url></webdriver.base.url>
+        <browserstack.user></browserstack.user>
+        <browserstack.key></browserstack.key>
     </properties>
     <dependencies>
         <dependency>
@@ -51,7 +53,7 @@
         </dependency>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
-            <artifactId>serenity-shutterbug</artifactId>
+            <artifactId>serenity-saucelabs</artifactId>
             <version>${serenity.version}</version>
             <scope>test</scope>
         </dependency>

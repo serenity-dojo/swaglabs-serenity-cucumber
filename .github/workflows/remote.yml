@@ -22,5 +22,5 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
 
-      - name: Smoke Tests
-        run: mvn clean verify -Denvironment=run_with_browserstack -Dbrowserstack.user=${{ secrets.BROWSERSTACK_USER }} -Dbrowserstack.key=${{ secrets.BROWSERSTACK_KEY }}
+      - name: Remote Tests
+        run: mvn clean verify -Denvironment=run_with_saucelabs -Dsaucelabs.username=${{ secrets.SAUCELABS_USER }} -Dsaucelabs.accessKey=${{ secrets.SAUCELABS_KEY }}
