@@ -1,0 +1,29 @@
+name: Remote Tests On BrowserStack
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up JDK 17
+        uses: actions/setup-java@v1
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: Cache the Maven packages to speed up build
+        uses: actions/cache@v1
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Snapshot Build
+        run: mvn clean install -T4 -DskipTests
+
+      - name: Smoke Tests
+        run: cd serenity-smoketests && mvn verify -Denvironment=run_with_browserstack -Dbrowserstack.user=${{ secrets.BROWSERSTACK_USER }} -Dbrowserstack.key=${{ secrets.BROWSERSTACK_KEY }}
