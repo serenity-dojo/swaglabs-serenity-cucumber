@@ -19,4 +19,10 @@ jobs:
         distribution: 'zulu'
         java-version: '17'
     - name: Build with Maven
-      run: mvn -B verify --file pom.xml
+      run: mvn -B verify --file pom.xml -Denvironment=with_screenshots
+
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@4.1.1
+      with:
+        branch: gh-pages # The branch the action should deploy to.
+        folder: target/site/serenity # The folder the action should deploy.

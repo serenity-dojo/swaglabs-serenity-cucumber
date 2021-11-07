@@ -7,7 +7,7 @@ Feature: Login
 
     Example: Colin logs in with valid credentials
       When Colin logs in with valid credentials
-      Then he should be taken to the application home page
+      Then he should be presented the product catalog
 
     @singlebrowser
     Scenario Outline: Login on with invalid credentials

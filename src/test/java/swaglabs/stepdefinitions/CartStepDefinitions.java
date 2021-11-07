@@ -4,12 +4,14 @@ import com.google.common.base.Splitter;
 import io.cucumber.java.DataTableType;
 import io.cucumber.java.ParameterType;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.questions.Text;
+import net.serenitybdd.screenplay.ui.Button;
 import net.serenitybdd.screenplay.ui.PageElement;
 import swaglabs.actions.cart.AddToCart;
 import swaglabs.actions.cart.RemoveItemFromCart;
@@ -70,21 +72,23 @@ public class CartStepDefinitions {
 
     /**
      * Open the shopping cart page directly
-     * @param actor
      */
-    @When("{actor} views his cart")
-    public void viewsCart(Actor actor) {
-        actor.attemptsTo(Navigate.toTheShoppingCart());
-//        actor.attemptsTo(Click.on(PageElement.called("shopping_cart_badge")));
+    @Given("{actor} has opened the shopping cart")
+    public void opensCartPage(Actor actor) {
+        actor.attemptsTo(Navigate.toTheShoppingCartPage());
     }
 
     /**
      * Navigate to the shopping cart via the shopping cart badge
-     * @param actor
      */
     @When("{actor} opens the shopping cart")
     public void opensCart(Actor actor) {
         actor.attemptsTo(Click.on(PageElement.called("shopping_cart_badge")));
+    }
+
+    @When("{actor} continues shopping")
+    public void continuesShopping(Actor actor) {
+        actor.attemptsTo(Click.on(Button.called("CONTINUE SHOPPING")));
     }
 
     @Then("{actor} should see the following items:")

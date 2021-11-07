@@ -24,6 +24,8 @@ public class CatalogPage {
 
     public static final Target PRODUCT_SORT = Dropdown.called("product_sort_container");
 
+    private static final String INVENTORY_OR_CART_ITEM = "[class$='cart_item'],[class$='inventory_item']";
+
     public static Target addToCartButtonFor(String item) {
         return Button.called("Add to cart")
                 .inside(PageElement.called("inventory_item").containingText(item));
@@ -33,9 +35,12 @@ public class CatalogPage {
         return Button.called("Add to cart");
     }
 
+    /**
+     * Remove button for an item in the cart or the inventory
+     */
     public static Target removeFromCartButtonFor(String item) {
         return Button.called("Remove")
-                .inside(PageElement.called("inventory_item").containingText(item));
+                .inside(PageElement.locatedBy(INVENTORY_OR_CART_ITEM).containingText(item));
     }
 
     public static Question<Integer> cartCount() {

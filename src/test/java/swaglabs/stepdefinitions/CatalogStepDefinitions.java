@@ -5,15 +5,17 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.questions.Text;
-import net.serenitybdd.screenplay.ui.*;
-import net.thucydides.core.steps.StepEventBus;
+import net.serenitybdd.screenplay.ui.Link;
+import net.serenitybdd.screenplay.ui.PageElement;
+import net.serenitybdd.screenplay.ui.Select;
+import swaglabs.actions.authentication.Login;
 import swaglabs.actions.catalog.CatalogPage;
 import swaglabs.actions.catalog.ProductDetailsPage;
+import swaglabs.actions.catalog.ViewInventoryItem;
+import swaglabs.actions.navigation.Navigate;
 import swaglabs.model.Product;
 import swaglabs.model.ProductDetails;
 
@@ -28,10 +30,8 @@ public class CatalogStepDefinitions {
     @When("{actor} has logged on to the application")
     public void logged_on_to_the_application(Actor actor) {
         actor.attemptsTo(
-                Open.url("https://www.saucedemo.com"),
-                Enter.theValue("standard_user").into(InputField.withPlaceholder("Username")),
-                Enter.theValue("secret_sauce").into(InputField.withPlaceholder("Password")),
-                Click.on(Button.called("Login"))
+                Navigate.toTheLoginPage(),
+                Login.withCredentials("standard_user","secret_sauce")
         );
     }
 
@@ -56,9 +56,7 @@ public class CatalogStepDefinitions {
      */
     @When("{actor} is browsing the product catalog")
     public void browsingTheProductCatalog(Actor actor) {
-        actor.attemptsTo(
-                Open.url("https://www.saucedemo.com/inventory.html")
-        );
+        actor.attemptsTo(Navigate.toTheCatalogPage());
     }
 
     //
@@ -67,9 +65,7 @@ public class CatalogStepDefinitions {
     @When("^(.*) (?:opens|has opened) the product details for \"(.*)\"")
     public void viewProductDetails(String actorName, String productName) {
         Actor actor = OnStage.theActorCalled(actorName);
-        actor.attemptsTo(
-                Click.on(Link.called(productName))
-        );
+        actor.attemptsTo(ViewInventoryItem.called(productName));
     }
 
 

@@ -1,10 +1,11 @@
 package swaglabs.actions.state;
 
 import net.serenitybdd.screenplay.Performable;
-import swaglabs.actions.ui.InTheBrowser;
+import net.serenitybdd.screenplay.actions.InTheBrowser;
 
 public class Reset {
     public static Performable applicationState() {
+
         return InTheBrowser.perform(
                 browser -> {
                     browser.evaluateJavascript("window.localStorage.clear()");

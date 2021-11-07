@@ -15,6 +15,7 @@ import swaglabs.actions.authentication.ApplicationPage;
 import swaglabs.actions.authentication.Login;
 import swaglabs.actions.errors.ErrorMessages;
 import swaglabs.actions.state.Reset;
+import swaglabs.actions.ui.PageHeader;
 import swaglabs.model.Customer;
 import swaglabs.model.UserCredentials;
 
@@ -49,17 +50,16 @@ public class LoginStepDefinitions {
 
     @When("{actor} logs in with valid credentials")
     public void logsInWithValidCredentials(Actor actor) {
-        System.out.println("  -> Running in thread: " + Thread.currentThread().getId());
         Customer customer = Customer.valueOf(actor.getName());
         actor.attemptsTo(
                 Login.withCredentials(customer.getUsername(), customer.getPassword())
         );
     }
 
-    @Then("{actor} should be taken to the application home page")
+    @Then("{actor} should be presented the product catalog")
     public void shouldBeOnHomePage(Actor actor) {
         actor.attemptsTo(
-                Ensure.that(PageElement.locatedBy(".title").containingText("Products")).isDisplayed()
+                Ensure.that(PageHeader.title()).isEqualTo("PRODUCTS")
         );
     }
 
@@ -74,13 +74,6 @@ public class LoginStepDefinitions {
     public void heShouldBePresentedWithTheErrorMessageMessage(Actor actor, String errorMessage) {
         actor.attemptsTo(
                 Ensure.that(Text.of(ErrorMessages.CURRENTLY_VISIBLE)).contains(errorMessage)
-        );
-    }
-
-    @After("@resetappstate")
-    public void clearSession() {
-        theActorInTheSpotlight().attemptsTo(
-                Reset.applicationState()
         );
     }
 }
