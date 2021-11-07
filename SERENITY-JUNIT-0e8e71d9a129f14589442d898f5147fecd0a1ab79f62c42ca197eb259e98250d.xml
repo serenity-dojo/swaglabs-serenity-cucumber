@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Login" skipped="0" tests="5" time="29.61" timestamp="2021-11-06 02:24:42"><testcase name="Colin logs in with valid credentials"/><testcase name="Login on with invalid credentials"/></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Login" skipped="0" tests="5" time="81.24" timestamp="2021-11-07 10:23:56"><testcase name="Colin logs in with valid credentials"/><testcase name="Login on with invalid credentials"/></testsuite>
