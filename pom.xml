@@ -11,9 +11,6 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-<!--        <serenity.version>3.0.5</serenity.version>-->
-<!--        <serenity.maven.version>3.0.5</serenity.maven.version>-->
-<!--        <serenity.cucumber.version>3.0.5</serenity.cucumber.version>-->
         <serenity.version>3.0.5</serenity.version>
         <serenity.maven.version>3.0.5</serenity.maven.version>
         <serenity.cucumber.version>3.0.5</serenity.cucumber.version>
@@ -59,6 +56,11 @@
             <artifactId>serenity-saucelabs</artifactId>
             <version>${serenity.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-saucelabs</artifactId>
+            <version>3.0.5</version>
         </dependency>
         <dependency>
             <groupId>org.junit.platform</groupId>
@@ -120,9 +122,9 @@
                         <include>**/*Suite.java</include>
                     </includes>
                     <parallel>classesAndMethods</parallel>
-                    <threadCount>8</threadCount>
+<!--                    <threadCount>8</threadCount>-->
+<!--                    <useUnlimitedThreads>true</useUnlimitedThreads>-->
                     <forkCount>8</forkCount>
-                    <reuseForks>true</reuseForks>
                 </configuration>
                 <executions>
                     <execution>
