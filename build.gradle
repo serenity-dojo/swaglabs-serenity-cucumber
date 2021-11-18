@@ -2,6 +2,7 @@ defaultTasks 'clean', 'test', 'aggregate'
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 buildscript {
@@ -26,8 +27,8 @@ targetCompatibility = 17
 
 ext {
     slf4jVersion = '1.7.7'
-    serenityCoreVersion = '3.0.5'
-    serenityCucumberVersion = '3.0.5'
+    serenityCoreVersion = '3.0.6-SNAPSHOT'
+    serenityCucumberVersion = '3.0.6-SNAPSHOT'
     junitVersion = '4.13.1'
     assertJVersion = '3.8.0'
     logbackVersion = '1.2.3'
@@ -46,9 +47,9 @@ dependencies {
 }
 
 test {
-    testLogging.showStandardStreams = true
+//    testLogging.showStandardStreams = true
     systemProperties System.getProperties()
-    maxParallelForks = 5
+    maxParallelForks = 8
 }
 
 gradle.startParameter.continueOnFailure = true

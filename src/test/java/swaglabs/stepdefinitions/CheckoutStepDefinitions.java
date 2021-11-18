@@ -8,6 +8,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.ensure.SoftlyEnsure;
+import org.jetbrains.annotations.NotNull;
 import swaglabs.actions.cart.AShoppingCart;
 import swaglabs.actions.cart.AddToCart;
 import swaglabs.actions.checkout.*;
@@ -46,9 +47,9 @@ public class CheckoutStepDefinitions {
         );
     }
 
-    @When("{actor} completes the checkout")
-    public void completesTheCheckout(Actor actor) {
-        checksOutWithPersonalDetails(actor);
+    @When("{actor} reviews his order")
+    public void reviewsOrder(Actor actor) {
+        actor.attemptsTo(Navigate.toTheOrderReviewPage());
     }
 
     /**
@@ -60,17 +61,21 @@ public class CheckoutStepDefinitions {
                 Navigate.toTheCheckoutPage(),
                 ProvidePersonalDetails.of(CustomerDetails.about(actor.getName()))
         );
-
     }
 
     @When("{actor} checks out the following items:")
     public void checksOutItems(Actor actor, List<CheckoutItem> items) {
-        List<String> itemNames = items.stream().map(CheckoutItem::description).collect(Collectors.toList());
+        List<String> itemNames = itemNamesFrom(items);
         actor.attemptsTo(
                 AddToCart.items(itemNames),
                 Checkout.theCurrentItemsInTheCart(),
                 ProvidePersonalDetails.of(CustomerDetails.about(actor.getName()))
         );
+    }
+
+    @NotNull
+    private List<String> itemNamesFrom(List<CheckoutItem> items) {
+        return items.stream().map(CheckoutItem::description).collect(Collectors.toList());
     }
 
     @When("{actor} confirms his order")
@@ -106,7 +111,7 @@ public class CheckoutStepDefinitions {
     @Then("{actor} should be presented with a summary of his purchase including:")
     public void presentSummaryOfPurchases(Actor actor, List<CheckoutItem> expectedItems) {
         Collection<CheckoutItem> displayedItems = actor.asksFor(CheckoutPage.items());
-        assertThat(displayedItems).containsOnlyElementsOf(expectedItems);
+        assertThat(displayedItems).containsAll(expectedItems);
     }
 
     /**

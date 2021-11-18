@@ -16,6 +16,10 @@ public class Navigate {
         return Open.url("https://www.saucedemo.com/checkout-step-one.html");
     }
 
+    public static Performable toTheOrderReviewPage() {
+        return Open.url("https://www.saucedemo.com/checkout-step-two.html");
+    }
+
     public static Performable toTheCatalogPage() {
         return Open.url("https://www.saucedemo.com/inventory.html");
     }

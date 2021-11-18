@@ -11,9 +11,12 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <serenity.version>3.0.5</serenity.version>
-        <serenity.maven.version>3.0.5</serenity.maven.version>
-        <serenity.cucumber.version>3.0.5</serenity.cucumber.version>
+<!--        <serenity.version>3.0.5</serenity.version>-->
+<!--        <serenity.maven.version>3.0.5</serenity.maven.version>-->
+<!--        <serenity.cucumber.version>3.0.5</serenity.cucumber.version>-->
+        <serenity.version>3.0.6-SNAPSHOT</serenity.version>
+        <serenity.maven.version>3.0.6-SNAPSHOT</serenity.maven.version>
+        <serenity.cucumber.version>3.0.6-SNAPSHOT</serenity.cucumber.version>
         <encoding>UTF-8</encoding>
         <tags></tags>
         <webdriver.base.url></webdriver.base.url>
@@ -117,8 +120,8 @@
                         <include>**/*Suite.java</include>
                     </includes>
                     <parallel>classesAndMethods</parallel>
-                    <threadCount>5</threadCount>
-                    <forkCount>5</forkCount>
+                    <threadCount>8</threadCount>
+                    <forkCount>8</forkCount>
                     <reuseForks>true</reuseForks>
                 </configuration>
                 <executions>

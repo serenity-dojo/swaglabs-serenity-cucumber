@@ -9,4 +9,4 @@ import org.junit.runner.RunWith;
         plugin = {"pretty"},
         features = "src/test/resources/features/cart"
 )
-public class CartTestSuite {}
+public class CartItemsTestSuite {}

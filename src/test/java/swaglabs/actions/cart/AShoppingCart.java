@@ -33,6 +33,10 @@ public class AShoppingCart implements Fact {
         return new AShoppingCart(inventoryItems);
     }
 
+    public static Fact thatIsEmpty() {
+        return new AShoppingCart(new ArrayList<>());
+    }
+
     @Override
     public void setup(Actor actor) {
         BrowseTheWeb.as(actor)

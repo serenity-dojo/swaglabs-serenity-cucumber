@@ -9,22 +9,28 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.questions.Text;
 import net.serenitybdd.screenplay.ui.Button;
 import net.serenitybdd.screenplay.ui.PageElement;
 import swaglabs.actions.cart.AddToCart;
+import swaglabs.actions.cart.CartPage;
 import swaglabs.actions.cart.RemoveItemFromCart;
 import swaglabs.actions.cart.AShoppingCart;
 import swaglabs.actions.catalog.CatalogPage;
+import swaglabs.actions.checkout.CheckoutPage;
 import swaglabs.actions.checkout.ProvidePersonalDetails;
 import swaglabs.actions.navigation.Navigate;
+import swaglabs.model.CheckoutItem;
 import swaglabs.model.CustomerDetails;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class CartStepDefinitions {
 
@@ -62,8 +68,23 @@ public class CartStepDefinitions {
 
     @And("{actor} has the following item(s) in his/her cart:")
     public void addedTheFollowingItemsToTheCart(Actor actor, List<String> items) {
+        actor.remember("ITEMS", items);
         actor.has(AShoppingCart.containing(items));
     }
+
+    @And("{actor} has no items in his/her cart")
+    public void addedTheFollowingItemsToTheCart(Actor actor) {
+        actor.has(AShoppingCart.thatIsEmpty());
+    }
+
+    @Then("{actor} should see the item/items he/she selected in the cart")
+    public void shouldSeeItemsHeSelected(Actor actor) {
+        List<String> expectedItems = actor.recall("ITEMS");
+        actor.attemptsTo(
+                Ensure.that(Text.ofEach(PageElement.called("inventory_item_name")))
+                        .containsElementsFrom(expectedItems));
+    }
+
 
     @When("{actor} removes {string} from the cart")
     public void heRemovesFromTheCart(Actor actor, String item) {
@@ -79,6 +100,14 @@ public class CartStepDefinitions {
     }
 
     /**
+     * Open the shopping cart page directly (as a WHEN step)
+     */
+    @Given("{actor} views his shopping cart")
+    public void viewShoppingCart(Actor actor) {
+        opensCartPage(actor);
+    }
+
+    /**
      * Navigate to the shopping cart via the shopping cart badge
      */
     @When("{actor} opens the shopping cart")
@@ -91,11 +120,24 @@ public class CartStepDefinitions {
         actor.attemptsTo(Click.on(Button.called("CONTINUE SHOPPING")));
     }
 
+
     @Then("{actor} should see the following items:")
     public void shouldSeeTheFollowingItems(Actor actor, List<String> expectedItems) {
         actor.attemptsTo(
                 Ensure.that(Text.ofEach(PageElement.called("inventory_item_name")))
                                  .containsElementsFrom(expectedItems));
+    }
+
+    @Then("the shopping cart should contain:")
+    public void shoppingCartShouldContain(List<CheckoutItem> expectedItems) {
+        Collection<CheckoutItem> itemsInCart = OnStage.theActorInTheSpotlight().asksFor(CartPage.items());
+        assertThat(itemsInCart).containsExactlyElementsOf(expectedItems);
+    }
+
+    @Then("the shopping cart should be empty")
+    public void shoppingCartShouldBeEmpty() {
+        Collection<CheckoutItem> itemsInCart = OnStage.theActorInTheSpotlight().asksFor(CartPage.items());
+        assertThat(itemsInCart).isEmpty();
     }
 
     @DataTableType

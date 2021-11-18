@@ -44,6 +44,7 @@ public class CatalogPage {
     }
 
     public static Question<Integer> cartCount() {
+        Text.of("#shopping-cart-badge").asInteger();
         return Text.of(PageElement.called("shopping_cart_badge")).asInteger();
     }
 

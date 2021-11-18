@@ -5,12 +5,14 @@ import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import net.serenitybdd.core.environment.EnvironmentSpecificConfiguration;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.questions.Text;
 import net.serenitybdd.screenplay.ui.PageElement;
 import net.thucydides.core.steps.StepEventBus;
+import net.thucydides.core.util.EnvironmentVariables;
 import swaglabs.actions.authentication.ApplicationPage;
 import swaglabs.actions.authentication.Login;
 import swaglabs.actions.errors.ErrorMessages;
@@ -30,6 +32,7 @@ public class LoginStepDefinitions {
         return new UserCredentials(entry.get("username"), entry.get("password"));
     }
 
+    EnvironmentVariables environmentVariables;
     @Given("{actor} is on the login page")
     public void onTheLoginPage(Actor actor) {
         actor.attemptsTo(Open.url("https://www.saucedemo.com/"));
@@ -59,7 +62,8 @@ public class LoginStepDefinitions {
     @Then("{actor} should be presented the product catalog")
     public void shouldBeOnHomePage(Actor actor) {
         actor.attemptsTo(
-                Ensure.that(PageHeader.title()).isEqualTo("PRODUCTS")
+                Ensure.that(Text.of(".title")).isEqualTo("PRODUCTS")
+//                Ensure.that(PageHeader.title()).isEqualTo("PRODUCTS")
         );
     }
 

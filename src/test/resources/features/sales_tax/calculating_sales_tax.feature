@@ -8,7 +8,7 @@ Feature: Calculating sales tax
     Scenario Outline: Colin sees the correctly calculated sales tax for his order
       Given Colin has the following item in his cart:
         | <Item> |
-      When he completes the checkout
+      When he reviews his order
       Then the total price should be:
         | Item total | Tax   | Total   |
         | <Price>    | <Tax> | <Total> |
@@ -22,7 +22,7 @@ Feature: Calculating sales tax
       Given Colin has the following items in his cart:
         |Sauce Labs Backpack   |
         |Sauce Labs Bike Light |
-      When he completes the checkout
+      When he reviews his order
       Then the total price should be:
         | Item total | Tax   | Total  |
         | $39.98     | $3.20 | $43.18 |
