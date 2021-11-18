@@ -14,9 +14,9 @@
 <!--        <serenity.version>3.0.5</serenity.version>-->
 <!--        <serenity.maven.version>3.0.5</serenity.maven.version>-->
 <!--        <serenity.cucumber.version>3.0.5</serenity.cucumber.version>-->
-        <serenity.version>3.0.6-SNAPSHOT</serenity.version>
-        <serenity.maven.version>3.0.6-SNAPSHOT</serenity.maven.version>
-        <serenity.cucumber.version>3.0.6-SNAPSHOT</serenity.cucumber.version>
+        <serenity.version>3.0.5</serenity.version>
+        <serenity.maven.version>3.0.5</serenity.maven.version>
+        <serenity.cucumber.version>3.0.5</serenity.cucumber.version>
         <encoding>UTF-8</encoding>
         <tags></tags>
         <webdriver.base.url></webdriver.base.url>
