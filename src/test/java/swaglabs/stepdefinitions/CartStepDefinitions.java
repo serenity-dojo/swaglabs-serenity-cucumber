@@ -39,6 +39,9 @@ public class CartStepDefinitions {
      */
     @When("{actor} adds {string} to the cart")
     public void colinAddsToTheCart(Actor actor, String item) {
+        if (item.equals("Compromised Product")) {
+            throw new TestCompromisedException("Compromised Product exception");
+        }
         actor.attemptsTo(AddToCart.item(item));
     }
 
