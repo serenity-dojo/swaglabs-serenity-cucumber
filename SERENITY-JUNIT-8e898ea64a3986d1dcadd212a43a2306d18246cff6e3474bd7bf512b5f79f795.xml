@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Calculating sales tax" skipped="0" tests="3" time="56.43" timestamp="2021-11-26 02:30:34"><testcase name="Colin sees the correctly calculated sales tax for his order"/><testcase name="Colin purchases two items so the total tax calculated includes tax for both items"/></testsuite>

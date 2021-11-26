@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Managing the cart","Colin adds items to the cart","SUCCESS","2021-11-26T16:36:50.120958353Z[Etc/UTC]","0.0","56.13"
+"Browse the catalog","Colin reviews our range of products","SUCCESS","2021-11-26T16:36:50.332119286Z[Etc/UTC]","0.0","36.36"
+"Calculating sales tax","Colin sees the correctly calculated sales tax for his order","SUCCESS","2021-11-26T16:36:50.459623337Z[Etc/UTC]","0.0","41.04"
