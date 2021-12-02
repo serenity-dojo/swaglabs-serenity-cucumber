@@ -15,6 +15,16 @@ Feature: Browse the catalog
       When Colin is browsing the product catalog
       Then he should be presented with 5 products
 
+    @Manual:Pass
+    Example: Colin reviews more of our range of products by hand
+      When Colin is browsing the product catalog
+      Then he should be presented with 5 products
+
+    @Manual:Fail
+    Example: Colin reviews more of our range of products by hand and finds a problem
+      When Colin is browsing the product catalog
+      Then he should be presented with 5 products
+
   Rule: Should show the price, description and image of each product
     # This approach assumes we have control over the products being displayed
     Example: Colin views information about each product
