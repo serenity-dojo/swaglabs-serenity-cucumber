@@ -23,24 +23,18 @@
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
-<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
-<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
-<script src="chartist/dist/chartist.min.js"></script>
-<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
-<!-- Required Stylesheets -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
 <link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
 
 <!-- Required Javascript -->
 <script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
-<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
 
 <script>
     jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
@@ -68,20 +62,21 @@
 <!--CHART.JS-->
 <script src="chartjs/chart.js"></script>
 <script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
-<script src="chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
 <script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
 <!-- JQuery-UI -->
 <link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
 <script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
-<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
 
 <script>
     jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
@@ -224,7 +219,7 @@
             <a href="#"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 26-11-2021 16:36</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 02-12-2021 14:40</span>
     <br style="clear:left"/>
 </div>
 
@@ -293,7 +288,7 @@
                                                         <table class="table" id="toc-table">
                                                                     <tr>
                                                                         <td class="rule-toc-entry" colspan="2">
-                                                                            <a href="#1234b5c8-f8e0-4bc6-bb99-54662c8d5bd7"
+                                                                            <a href="#2ce29c80-7e38-4295-8f9c-e62e257f06be"
                                                                                title="View scenario details for this rule">
                                                                                 Rule: Users can add a product to the cart from the product details
                                                                         </td>
@@ -330,7 +325,7 @@
                                                                         </tr>
                                                                     <tr>
                                                                         <td class="rule-toc-entry" colspan="2">
-                                                                            <a href="#aff09f50-bb73-43d9-9256-2a47380f893c"
+                                                                            <a href="#d2ac4e24-17ed-4cb0-a297-f6fa2c5716c6"
                                                                                title="View scenario details for this rule">
                                                                                 Rule: Users can view the contents of their cart
                                                                         </td>
@@ -367,7 +362,7 @@
                                                                         </tr>
                                                                     <tr>
                                                                         <td class="rule-toc-entry" colspan="2">
-                                                                            <a href="#deff688e-5dc6-41ce-8715-fe3e5f21bec9"
+                                                                            <a href="#f840447d-9154-415c-9dcc-afccf143085c"
                                                                                title="View scenario details for this rule">
                                                                                 Rule: Customer can add or remove items from the catalog
                                                                         </td>
@@ -555,7 +550,7 @@
                                                                         </tr>
                                                                     <tr>
                                                                         <td class="rule-toc-entry" colspan="2">
-                                                                            <a href="#c75c7f54-c772-4226-a4fd-1a54f382258a"
+                                                                            <a href="#4b568f4c-214d-4b82-b275-06a88394bd1b"
                                                                                title="View scenario details for this rule">
                                                                                 Rule: Customer can remove items from their cart
                                                                         </td>
@@ -626,7 +621,7 @@
 
                                                     <h3>Scenarios</h3>
 
-                                                        <a name="eb3af392-f0c3-491e-8fa0-b41d4b810d2f"></a>
+                                                        <a name="b739941b-b222-4d6c-bcfb-65eb40096a7a"></a>
                                                             <div class="scenario-docs card">
                                                                 <div class="scenario-docs card-header"
                                                                      style="min-height:1.5em;">
@@ -639,7 +634,7 @@
                                                                 </div>
                                                             </div>
 
-                                                        <a name="1234b5c8-f8e0-4bc6-bb99-54662c8d5bd7"></a>
+                                                        <a name="2ce29c80-7e38-4295-8f9c-e62e257f06be"></a>
                                                             <div class="rule-title">
                                                                 Rule: Users can add a product to the cart from the product details</div>
 
@@ -668,7 +663,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        <a name="aff09f50-bb73-43d9-9256-2a47380f893c"></a>
+                                                        <a name="d2ac4e24-17ed-4cb0-a297-f6fa2c5716c6"></a>
                                                             <div class="rule-title">
                                                                 Rule: Users can view the contents of their cart</div>
 
@@ -705,7 +700,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        <a name="deff688e-5dc6-41ce-8715-fe3e5f21bec9"></a>
+                                                        <a name="f840447d-9154-415c-9dcc-afccf143085c"></a>
                                                             <div class="rule-title">
                                                                 Rule: Customer can add or remove items from the catalog</div>
 
@@ -870,7 +865,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        <a name="c75c7f54-c772-4226-a4fd-1a54f382258a"></a>
+                                                        <a name="4b568f4c-214d-4b82-b275-06a88394bd1b"></a>
                                                             <div class="rule-title">
                                                                 Rule: Customer can remove items from their cart</div>
 
@@ -1002,8 +997,8 @@
                                                                         (2 examples)
                                                                 </td>
                                                                 <td>3</td>
-                                                                <td>16:36:50</td>
-                                                                <td>56s 127ms</td>
+                                                                <td>14:40:19</td>
+                                                                <td>1m 5s</td>
                                                                 <td>
                                                                         <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                             style="display:none">SUCCESS</span>
@@ -1014,8 +1009,8 @@
                                                                         <a href="managing_the_cart_colin_adds_an_item_to_the_cart.html">Colin adds an item to the cart</a>
                                                                 </td>
                                                                 <td>3</td>
-                                                                <td>16:37:46</td>
-                                                                <td>4s 882ms</td>
+                                                                <td>14:41:24</td>
+                                                                <td>6s 245ms</td>
                                                                 <td>
                                                                         <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                             style="display:none">SUCCESS</span>
@@ -1026,8 +1021,8 @@
                                                                         <a href="managing_the_cart_colin_adds_ignored_items_to_the_cart.html">Colin adds ignored items to the cart</a>
                                                                 </td>
                                                                 <td>4</td>
-                                                                <td>16:37:51</td>
-                                                                <td>193ms</td>
+                                                                <td>14:41:31</td>
+                                                                <td>106ms</td>
                                                                 <td>
                                                                         <a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a> <span
                                                                             style="display:none">IGNORED</span>
@@ -1038,8 +1033,8 @@
                                                                         <a href="managing_the_cart_colin_adds_pending_items_to_the_cart.html">Colin adds pending items to the cart</a>
                                                                 </td>
                                                                 <td>4</td>
-                                                                <td>16:37:51</td>
-                                                                <td>152ms</td>
+                                                                <td>14:41:31</td>
+                                                                <td>075ms</td>
                                                                 <td>
                                                                         <a href='##beforetable'><i class='bi bi-hourglass-top pending-icon ' title='PENDING'></i></a> <span
                                                                             style="display:none">PENDING</span>
@@ -1050,8 +1045,8 @@
                                                                         <a href="managing_the_cart_colin_adds_skipped_items_to_the_cart.html">Colin adds skipped items to the cart</a>
                                                                 </td>
                                                                 <td>4</td>
-                                                                <td>16:37:51</td>
-                                                                <td>126ms</td>
+                                                                <td>14:41:31</td>
+                                                                <td>070ms</td>
                                                                 <td>
                                                                         <a href='##beforetable'><i class='bi bi-skip-forward skipped-icon ' title='SKIPPED'></i></a> <span
                                                                             style="display:none">SKIPPED</span>
@@ -1062,8 +1057,8 @@
                                                                         <a href="managing_the_cart_colin_adds_several_items_to_the_cart.html">Colin adds several items to the cart</a>
                                                                 </td>
                                                                 <td>4</td>
-                                                                <td>16:37:51</td>
-                                                                <td>5s 644ms</td>
+                                                                <td>14:41:31</td>
+                                                                <td>8s 303ms</td>
                                                                 <td>
                                                                         <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                             style="display:none">SUCCESS</span>
@@ -1074,8 +1069,8 @@
                                                                         <a href="managing_the_cart_colin_removes_an_item_from_the_cart_on_the_product_catalog_page_2.html">Colin removes an item from the cart on the product catalog page 2</a>
                                                                 </td>
                                                                 <td>4</td>
-                                                                <td>16:37:57</td>
-                                                                <td>5s 208ms</td>
+                                                                <td>14:41:39</td>
+                                                                <td>5s 402ms</td>
                                                                 <td>
                                                                         <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                             style="display:none">SUCCESS</span>
@@ -1086,8 +1081,8 @@
                                                                         <a href="managing_the_cart_colin_removes_an_item_from_the_cart_overview.html">Colin removes an item from the cart overview</a>
                                                                 </td>
                                                                 <td>4</td>
-                                                                <td>16:38:02</td>
-                                                                <td>4s 363ms</td>
+                                                                <td>14:41:45</td>
+                                                                <td>4s 220ms</td>
                                                                 <td>
                                                                         <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                             style="display:none">SUCCESS</span>
@@ -1098,8 +1093,8 @@
                                                                         <a href="managing_the_cart_colin_views_the_details_of_a_product_and_adds_it_to_his_cart_2.html">Colin views the details of a product and adds it to his cart 2</a>
                                                                 </td>
                                                                 <td>4</td>
-                                                                <td>16:38:07</td>
-                                                                <td>2s 802ms</td>
+                                                                <td>14:41:49</td>
+                                                                <td>2s 596ms</td>
                                                                 <td>
                                                                         <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                             style="display:none">SUCCESS</span>
@@ -1110,8 +1105,8 @@
                                                                         <a href="managing_the_cart_colin_sees_every_item_he_has_added_in_the_cart.html">Colin sees every item he has added in the cart</a>
                                                                 </td>
                                                                 <td>4</td>
-                                                                <td>16:38:09</td>
-                                                                <td>2s 319ms</td>
+                                                                <td>14:41:52</td>
+                                                                <td>2s 256ms</td>
                                                                 <td>
                                                                         <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                             style="display:none">SUCCESS</span>
@@ -1143,7 +1138,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12">
-                    <span class="version">Serenity BDD version 3.1.0</span>
+                    <span class="version">Serenity BDD version 3.1.4</span>
                 </div>
             </div>
         </div>
@@ -1152,9 +1147,6 @@
 <!-- Chart data -->
     <!-- PIE CHART -->
     <script>
-
-        // Register the plugin to all charts:
-        Chart.register(ChartDataLabels);
 
         // The results pie chart
         const outcomeChartCtx = document.getElementById('resultChart');
@@ -1176,7 +1168,7 @@
                 label: 'Test Results',
                 fill: false,
                 data: [8,1,1,1,0,0,0,0],
-                backgroundColor: ['rgba(153,204,51,0.5)',pattern.draw('line', 'rgba(165, 199, 238, 0.5)'),pattern.draw('line-vertical', 'rgba(168, 168, 168, 0.5)'),pattern.draw('diagonal', 'rgba(238, 224, 152, 0.75)'),pattern.draw('diagonal-right-left', 'rgba(255, 153, 102, 0.5)'),pattern.draw('zigzag-vertical', 'rgba(255, 22, 49, 0.5)'),pattern.draw('zigzag', 'rgba(255, 97, 8, 0.5)'),pattern.draw('triangle', 'rgba(255, 104, 255, 0.5)')],
+                backgroundColor: ['rgba(153,204,51,0.5)',pattern.draw('line', 'rgba(165, 199, 238, 0.5)'),pattern.draw('line-vertical', 'rgba(168, 168, 168, 0.5)'),pattern.draw('diagonal', 'rgba(238, 224, 152, 0.75)'),pattern.draw('diagonal-right-left', 'rgba(255, 153, 102, 0.5)'),pattern.draw('zigzag-vertical', 'rgba(255, 22, 49, 0.5)'),pattern.draw('zigzag', 'rgba(255, 97, 8, 0.5)'),pattern.draw('square', 'rgba(255, 104, 255, 0.5)')],
                 borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)'],
                 borderWidth: 1,
             }]
@@ -1251,9 +1243,6 @@
     <!-- SUMMARY BAR CHART -->
     <script>
 
-        // Register the plugin to all charts:
-        Chart.register(ChartDataLabels);
-
         // The Severity bar chart
         const severityChartCtx = document.getElementById('severityChart');
 
@@ -1275,7 +1264,7 @@
                 {
                     label: 'Automated',
                     data: [8,1,1,1,0,0,0,0],
-                    backgroundColor: ['rgba(153,204,51,0.5)',pattern.draw('line', 'rgba(165, 199, 238, 0.5)'),pattern.draw('line-vertical', 'rgba(168, 168, 168, 0.5)'),pattern.draw('diagonal', 'rgba(238, 224, 152, 0.75)'),pattern.draw('diagonal-right-left', 'rgba(255, 153, 102, 0.5)'),pattern.draw('zigzag-vertical', 'rgba(255, 22, 49, 0.5)'),pattern.draw('zigzag', 'rgba(255, 97, 8, 0.5)'),pattern.draw('triangle', 'rgba(255, 104, 255, 0.5)')],
+                    backgroundColor: ['rgba(153,204,51,0.5)',pattern.draw('line', 'rgba(165, 199, 238, 0.5)'),pattern.draw('line-vertical', 'rgba(168, 168, 168, 0.5)'),pattern.draw('diagonal', 'rgba(238, 224, 152, 0.75)'),pattern.draw('diagonal-right-left', 'rgba(255, 153, 102, 0.5)'),pattern.draw('zigzag-vertical', 'rgba(255, 22, 49, 0.5)'),pattern.draw('zigzag', 'rgba(255, 97, 8, 0.5)'),pattern.draw('square', 'rgba(255, 104, 255, 0.5)')],
                     borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)'],
                     borderWidth: 1
                 },
@@ -1357,7 +1346,7 @@
             datasets: [{
                 label: 'Number of tests per duration',
                 fill: false,
-                data: ['3','0','2','4','0','0','2','0'],
+                data: ['3','0','2','3','1','0','0','2'],
                 backgroundColor: 'rgba(83, 146, 255,0.5)',
                 borderColor: 'rgba(83, 146, 255, 1)',
             }]
@@ -1406,6 +1395,6 @@
 
         durationChartCtx.onclick = durationClickHandler;
     </script>
-    <!-- END SUMMARY CHART -->
+    <!-- END DURATION CHART -->
 </body>
 </html>

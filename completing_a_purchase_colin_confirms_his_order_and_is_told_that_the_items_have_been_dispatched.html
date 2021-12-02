@@ -20,24 +20,18 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
-<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
-<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
-<script src="chartist/dist/chartist.min.js"></script>
-<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
-<!-- Required Stylesheets -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
 <link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
 
 <!-- Required Javascript -->
 <script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
-<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
 
 <script>
     jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
@@ -65,20 +59,21 @@
 <!--CHART.JS-->
 <script src="chartjs/chart.js"></script>
 <script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
-<script src="chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
 <script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
 <!-- JQuery-UI -->
 <link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
 <script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
-<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
 
 <script>
     jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
@@ -151,7 +146,7 @@
             <a href="requirement_type_feature.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 26-11-2021 16:37</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 02-12-2021 14:41</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -221,7 +216,7 @@
                                     <div>
                                         <span class="cast-description">Colin has:</span>
                                         <ul>
-                                                <li>swaglabs.actions.cart.AShoppingCart@3857c5d5</li>
+                                                <li>swaglabs.actions.cart.AShoppingCart@1d921267</li>
                                         </ul>
                                     </div>
                                     <div>
@@ -299,7 +294,7 @@
                                 </a>
                         </td>
                     <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">598ms</span></td>
+                    <td width="100"><span class="top-level-step">308ms</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
 
@@ -330,7 +325,7 @@
                                 </a>
                         </td>
                     <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">032ms</span></td>
+                    <td width="100"><span class="top-level-step">285ms</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
 
@@ -373,7 +368,7 @@
                                 </a>
                         </td>
                     <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">2s 927ms</span></td>
+                    <td width="100"><span class="top-level-step">2s 757ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -407,7 +402,7 @@
                                 </a>
                         </td>
                     <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">701ms</span></td>
+                    <td width="100"><span class="nested-group-step">687ms</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
 
@@ -450,7 +445,7 @@
                                 </a>
                         </td>
                     <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">2s 189ms</span></td>
+                    <td width="100"><span class="nested-step">2s 043ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -491,7 +486,7 @@
                                 </a>
                         </td>
                     <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">574ms</span></td>
+                    <td width="100"><span class="nested-group-step">494ms</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
 
@@ -529,7 +524,7 @@
                                 </a>
                         </td>
                     <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">662ms</span></td>
+                    <td width="100"><span class="nested-group-step">514ms</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
 
@@ -567,7 +562,7 @@
                                 </a>
                         </td>
                     <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">534ms</span></td>
+                    <td width="100"><span class="nested-group-step">575ms</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
 
@@ -605,7 +600,7 @@
                                 </a>
                         </td>
                     <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">393ms</span></td>
+                    <td width="100"><span class="nested-group-step">429ms</span></td>
                 </tr>
 
                             </table>
@@ -649,7 +644,7 @@
                                 </a>
                         </td>
                     <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">422ms</span></td>
+                    <td width="100"><span class="top-level-step">423ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -683,7 +678,7 @@
                                 </a>
                         </td>
                     <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">402ms</span></td>
+                    <td width="100"><span class="nested-group-step">404ms</span></td>
                 </tr>
 
                             </table>
@@ -723,7 +718,7 @@
                                 </a>
                         </td>
                     <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">275ms</span></td>
+                    <td width="100"><span class="top-level-step">397ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -757,7 +752,7 @@
                                 </a>
                         </td>
                     <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">256ms</span></td>
+                    <td width="100"><span class="nested-group-step">381ms</span></td>
                 </tr>
 
                             </table>
@@ -766,7 +761,7 @@
             <tr class="test-SUCCESS">
                     <td colspan="3"></td>
                 <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                <td width="100"><span class="top-level-step"><em>4.4s</em></span></td>
+                <td width="100"><span class="top-level-step"><em>4.34s</em></span></td>
             </tr>
 
         </table>
@@ -779,7 +774,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12">
-            <span class="version">Serenity BDD version 3.1.0</span>
+            <span class="version">Serenity BDD version 3.1.4</span>
         </div>
     </div>
 </div>

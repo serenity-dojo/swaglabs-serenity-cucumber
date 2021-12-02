@@ -1,5 +1,3 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Login","Colin logs in with valid credentials","SUCCESS","2021-11-26T16:36:50.264791415Z[Etc/UTC]","0.0","29.42"
-"Login","Login on with invalid credentials","SUCCESS","2021-11-26T16:37:20.383233314Z[Etc/UTC]","0.0","26.09"
-"Browse the catalog","Colin views information about each product","SUCCESS","2021-11-26T16:37:27.59172256Z[Etc/UTC]","0.0","23.87"
-"Browse the catalog","Colin views the details for specific products","SUCCESS","2021-11-26T16:37:51.518843077Z[Etc/UTC]","0.0","17.45"
+"Login","Login on with invalid credentials","SUCCESS","2021-12-02T14:40:54.467250638Z[Etc/UTC]","0.0","28.23"
+"Browse the catalog","Colin views the details for specific products","SUCCESS","2021-12-02T14:41:35.512741152Z[Etc/UTC]","0.0","17.71"

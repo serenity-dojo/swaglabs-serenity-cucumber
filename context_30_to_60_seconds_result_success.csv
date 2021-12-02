@@ -1,4 +1,5 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Managing the cart","Colin adds items to the cart","SUCCESS","2021-11-26T16:36:50.120958353Z[Etc/UTC]","0.0","56.13"
-"Browse the catalog","Colin reviews our range of products","SUCCESS","2021-11-26T16:36:50.332119286Z[Etc/UTC]","0.0","36.36"
-"Calculating sales tax","Colin sees the correctly calculated sales tax for his order","SUCCESS","2021-11-26T16:36:50.459623337Z[Etc/UTC]","0.0","41.04"
+"Login","Colin logs in with valid credentials","SUCCESS","2021-12-02T14:40:19.22690974Z[Etc/UTC]","0.0","34.65"
+"Browse the catalog","Colin reviews our range of products","SUCCESS","2021-12-02T14:40:19.526028132Z[Etc/UTC]","0.0","39.89"
+"Browse the catalog","Colin views information about each product","SUCCESS","2021-12-02T14:41:01.531623094Z[Etc/UTC]","0.0","33.92"
+"Calculating sales tax","Colin sees the correctly calculated sales tax for his order","SUCCESS","2021-12-02T14:40:19.586515192Z[Etc/UTC]","0.0","46.95"

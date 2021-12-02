@@ -26,24 +26,18 @@
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
-<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
-<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
-<script src="chartist/dist/chartist.min.js"></script>
-<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
-<!-- Required Stylesheets -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
 <link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
 
 <!-- Required Javascript -->
 <script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
-<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
 
 <script>
     jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
@@ -71,20 +65,21 @@
 <!--CHART.JS-->
 <script src="chartjs/chart.js"></script>
 <script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
-<script src="chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
 <script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
 <!-- JQuery-UI -->
 <link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
 <script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
-<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
 
 <script>
     jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
@@ -177,7 +172,7 @@
             <a href="requirement_type_feature.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 26-11-2021 16:38:25</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 02-12-2021 14:42:05</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -193,8 +188,8 @@
                             <div class="test-count-summary">
                                 <div>
 
-                                4 tests
-                                    across 4 scenarios
+                                6 tests
+                                    across 6 scenarios
 
                                      |
                                         <a href="duration_under_1_second.csv" title="Download CSV"> <i class="bi bi-cloud-arrow-down" title="Download CSV"></i></a>
@@ -234,43 +229,43 @@
                                                                         <td>
                                                                             <i class="bi bi-flag-fill"></i> Tests Started
                                                                         </td>
-                                                                        <td>Nov 26, 2021 16:37:27</td>
+                                                                        <td>Dec 02, 2021 14:41:00</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stop-circle"></i> Tests Finished
                                                                         </td>
-                                                                        <td>Nov 26, 2021 16:37:51</td>
+                                                                        <td>Dec 02, 2021 14:41:31</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch"></i> Total Duration
                                                                         </td>
-                                                                        <td>24s</td>
+                                                                        <td>31s</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-trophy"></i> Fastest Test
                                                                         </td>
-                                                                        <td>126ms</td>
+                                                                        <td>70ms</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-skip-start"></i> Slowest Test
                                                                         </td>
-                                                                        <td>193ms</td>
+                                                                        <td>454ms</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch"></i> Average Execution Time
                                                                         </td>
-                                                                        <td>163ms</td>
+                                                                        <td>222ms</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch-fill"></i> Total Execution Time
                                                                         </td>
-                                                                        <td>655ms</td>
+                                                                        <td>1s</td>
                                                                     </tr>
                                                                     </tbody>
                                                                 </table>
@@ -306,23 +301,6 @@
                                                             </div>
                                                         </div>
                                                 </div>
-                                                    <div class="row">
-                                                        <div class="col-sm-12">
-                                                            <h3>Tags</h3>
-
-                                                                <div class="card">
-                                                                    <div class="card-body">
-                                                                        <div>
-                                                                                <a href="tag_manual.html">
-                                                                                    <span class="badge" style="background-color:#a5c7ed; margin:1em;padding:4px;">
-                                                                                        <i class="bi bi-tag"></i> Manual&nbsp;&nbsp;&nbsp;1
-                                                                                    </span>
-                                                                                </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                        </div>
-                                                    </div>
                                             </div>
                                         </div>
                                         <div id="tests" class="tab-pane fade in">
@@ -351,8 +329,8 @@
                                                         <a href="managing_the_cart_colin_adds_ignored_items_to_the_cart.html">Colin adds ignored items to the cart</a>
                                                     </td>
                                                     <td>5</td>
-                                                    <td>16:37:51</td>
-                                                    <td>193ms</td>
+                                                    <td>14:41:31</td>
+                                                    <td>106ms</td>
                                                     <td><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a> <span
                                                             style="display:none">IGNORED</span></td>
                                                 </tr>
@@ -364,8 +342,8 @@
                                                         <a href="managing_the_cart_colin_adds_pending_items_to_the_cart.html">Colin adds pending items to the cart</a>
                                                     </td>
                                                     <td>5</td>
-                                                    <td>16:37:51</td>
-                                                    <td>152ms</td>
+                                                    <td>14:41:31</td>
+                                                    <td>075ms</td>
                                                     <td><a href='##beforetable'><i class='bi bi-hourglass-top pending-icon ' title='PENDING'></i></a> <span
                                                             style="display:none">PENDING</span></td>
                                                 </tr>
@@ -377,8 +355,8 @@
                                                         <a href="managing_the_cart_colin_adds_skipped_items_to_the_cart.html">Colin adds skipped items to the cart</a>
                                                     </td>
                                                     <td>5</td>
-                                                    <td>16:37:51</td>
-                                                    <td>126ms</td>
+                                                    <td>14:41:31</td>
+                                                    <td>070ms</td>
                                                     <td><a href='##beforetable'><i class='bi bi-skip-forward skipped-icon ' title='SKIPPED'></i></a> <span
                                                             style="display:none">SKIPPED</span></td>
                                                 </tr>
@@ -413,28 +391,34 @@
                                                     <td><a href='##beforetable'><i class='bi bi-hourglass-top pending-icon ' title='PENDING'></i></a> <span
                                                             style="display:none">PENDING</span></td>
                                                 </tr>
+                                                <tr>
+                                                    <td>
+                                                            <a href="feature_catalog_sl_browse_the_catalog.html">Browse the catalog</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="browse_the_catalog_colin_reviews_more_of_our_range_of_products_by_hand.html">Colin reviews more of our range of products by hand</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                            <a href="feature_catalog_sl_browse_the_catalog.html">Browse the catalog</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="browse_the_catalog_colin_reviews_more_of_our_range_of_products_by_hand_and_finds_a_problem.html">Colin reviews more of our range of products by hand and finds a problem</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon ' title='FAILURE'></i></a> <span
+                                                            style="display:none">FAILURE</span></td>
+                                                </tr>
                                                 </tbody>
                                             </table>
 
                                                     </div>
                                                 </div>
                                             </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <h3>Tags</h3>
-                    <div class="card">
-                        <div class="card-body">
-                            <div>
-                                    <a href="tag_manual.html">
-                                    <span class="tag-badge badge" style="background-color:#a5c7ed; margin:1em;padding:4px;">
-                                        <i class="bi bi-tag-fill"></i> Manual&nbsp;&nbsp;&nbsp;1
-                                    </span>
-                                    </a>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-        </div>
                                         </div>
                                     </div>
                                 </div>
@@ -452,7 +436,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12">
-            <span class="version">Serenity BDD version 3.1.0</span>
+            <span class="version">Serenity BDD version 3.1.4</span>
         </div>
     </div>
 </div>
@@ -460,9 +444,6 @@
 <!-- Chart data -->
     <!-- PIE CHART -->
     <script>
-
-        // Register the plugin to all charts:
-        Chart.register(ChartDataLabels);
 
         // The results pie chart
         const outcomeChartCtx = document.getElementById('resultChart');
@@ -483,8 +464,8 @@
             datasets: [{
                 label: 'Test Results',
                 fill: false,
-                data: [0,2,1,1,0,0,0,0],
-                backgroundColor: ['rgba(153,204,51,0.5)',pattern.draw('line', 'rgba(165, 199, 238, 0.5)'),pattern.draw('line-vertical', 'rgba(168, 168, 168, 0.5)'),pattern.draw('diagonal', 'rgba(238, 224, 152, 0.75)'),pattern.draw('diagonal-right-left', 'rgba(255, 153, 102, 0.5)'),pattern.draw('zigzag-vertical', 'rgba(255, 22, 49, 0.5)'),pattern.draw('zigzag', 'rgba(255, 97, 8, 0.5)'),pattern.draw('triangle', 'rgba(255, 104, 255, 0.5)')],
+                data: [1,2,1,1,0,1,0,0],
+                backgroundColor: ['rgba(153,204,51,0.5)',pattern.draw('line', 'rgba(165, 199, 238, 0.5)'),pattern.draw('line-vertical', 'rgba(168, 168, 168, 0.5)'),pattern.draw('diagonal', 'rgba(238, 224, 152, 0.75)'),pattern.draw('diagonal-right-left', 'rgba(255, 153, 102, 0.5)'),pattern.draw('zigzag-vertical', 'rgba(255, 22, 49, 0.5)'),pattern.draw('zigzag', 'rgba(255, 97, 8, 0.5)'),pattern.draw('square', 'rgba(255, 104, 255, 0.5)')],
                 borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)'],
                 borderWidth: 1,
             }]
@@ -534,7 +515,7 @@
                         ctx.font = fontSize + "em sans-serif";
                         ctx.textBaseline = "middle";
 
-                        var text = " "
+                        var text = "17%"
                         textX = 10 + Math.round((width - ctx.measureText(text).width) / 2);
                         textY = (height / 2) - 40;
 
@@ -559,9 +540,6 @@
     <!-- SUMMARY BAR CHART -->
     <script>
 
-        // Register the plugin to all charts:
-        Chart.register(ChartDataLabels);
-
         // The Severity bar chart
         const severityChartCtx = document.getElementById('severityChart');
 
@@ -583,13 +561,13 @@
                 {
                     label: 'Automated',
                     data: [0,1,1,1,0,0,0,0],
-                    backgroundColor: ['rgba(153,204,51,0.5)',pattern.draw('line', 'rgba(165, 199, 238, 0.5)'),pattern.draw('line-vertical', 'rgba(168, 168, 168, 0.5)'),pattern.draw('diagonal', 'rgba(238, 224, 152, 0.75)'),pattern.draw('diagonal-right-left', 'rgba(255, 153, 102, 0.5)'),pattern.draw('zigzag-vertical', 'rgba(255, 22, 49, 0.5)'),pattern.draw('zigzag', 'rgba(255, 97, 8, 0.5)'),pattern.draw('triangle', 'rgba(255, 104, 255, 0.5)')],
+                    backgroundColor: ['rgba(153,204,51,0.5)',pattern.draw('line', 'rgba(165, 199, 238, 0.5)'),pattern.draw('line-vertical', 'rgba(168, 168, 168, 0.5)'),pattern.draw('diagonal', 'rgba(238, 224, 152, 0.75)'),pattern.draw('diagonal-right-left', 'rgba(255, 153, 102, 0.5)'),pattern.draw('zigzag-vertical', 'rgba(255, 22, 49, 0.5)'),pattern.draw('zigzag', 'rgba(255, 97, 8, 0.5)'),pattern.draw('square', 'rgba(255, 104, 255, 0.5)')],
                     borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)'],
                     borderWidth: 1
                 },
                 {
                     label: 'Manual',
-                    data: [0,1,0,0,0,0,0,0],
+                    data: [1,1,0,0,0,1,0,0],
                     backgroundColor: ['rgba(153,204,51,0.25)',pattern.draw('line', 'rgba(165, 199, 238, 0.25)'),pattern.draw('line-vertical', 'rgba(168, 168, 168, 0.25)'),pattern.draw('diagonal', 'rgba(238, 224, 152, 0.375)'),pattern.draw('diagonal-right-left', 'rgba(255, 153, 102, 0.25)'),pattern.draw('zigzag-vertical', 'rgba(255, 22, 49, 0.25)'),pattern.draw('zigzag', 'rgba(255, 97, 8, 0.25)'),pattern.draw('triangle', 'rgba(255, 104, 255, 0.25)')],
                     borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)'],
                     borderWidth: 1
@@ -665,7 +643,7 @@
             datasets: [{
                 label: 'Number of tests per duration',
                 fill: false,
-                data: ['4','0','0','0','0','0','0','0'],
+                data: ['6','0','0','0','0','0','0','0'],
                 backgroundColor: 'rgba(83, 146, 255,0.5)',
                 borderColor: 'rgba(83, 146, 255, 1)',
             }]
@@ -714,7 +692,7 @@
 
         durationChartCtx.onclick = durationClickHandler;
     </script>
-    <!-- END SUMMARY CHART -->
+    <!-- END DURATION CHART -->
 
 
 
@@ -734,7 +712,7 @@
             },
             {
                 title: 'Catalog',
-                result: 'PENDING',
+                result: 'FAILURE',
                 link: "capability_catalog.html"
             },
         ]
@@ -746,7 +724,7 @@
             datasets: [
                 {
                     label: ['Passing Tests'],
-                    data: [null,null],
+                    data: [null,1],
                     backgroundColor: [ 'rgba(153,204,51,0.5)' ]
                 },
                 {
@@ -771,7 +749,7 @@
                 },
                 {
                     label: ['Failed Tests'],
-                    data: [null,null],
+                    data: [null,1],
                     backgroundColor: [ pattern.draw('zigzag-vertical', 'rgba(255, 22, 49, 0.5)') ]
                 },
                 {
@@ -782,7 +760,7 @@
                 {
                     label: ['Compromised Tests'],
                     data: [null,null],
-                    backgroundColor: [ pattern.draw('triangle', 'rgba(255, 104, 255, 0.5)') ]
+                    backgroundColor: [ pattern.draw('square', 'rgba(255, 104, 255, 0.5)') ]
                 },
             ]
         }

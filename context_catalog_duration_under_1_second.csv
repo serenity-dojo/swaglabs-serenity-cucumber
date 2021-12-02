@@ -1,2 +1,4 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Browse the catalog","Colin reviews our range of products by hand","PENDING","2021-11-26T16:37:27.329136042Z[Etc/UTC]","0.0","0.18"
+"Browse the catalog","Colin reviews our range of products by hand","PENDING","2021-12-02T14:41:00.143619703Z[Etc/UTC]","0.0","0.45"
+"Browse the catalog","Colin reviews more of our range of products by hand","SUCCESS","2021-12-02T14:41:00.704135505Z[Etc/UTC]","0.0","0.28"
+"Browse the catalog","Colin reviews more of our range of products by hand and finds a problem","FAILURE","2021-12-02T14:41:01.073759269Z[Etc/UTC]","0.0","0.35"

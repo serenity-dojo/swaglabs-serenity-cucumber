@@ -21,24 +21,18 @@
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
-<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
-<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
-<script src="chartist/dist/chartist.min.js"></script>
-<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
-<!-- Required Stylesheets -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
 <link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
 
 <!-- Required Javascript -->
 <script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
-<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
 
 <script>
     jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
@@ -66,20 +60,21 @@
 <!--CHART.JS-->
 <script src="chartjs/chart.js"></script>
 <script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
-<script src="chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
 <script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
 <!-- JQuery-UI -->
 <link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
 <script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
-<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
 
 <script>
     jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
@@ -147,7 +142,7 @@
             <a href="requirement_type_feature.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 26-11-2021 16:38:32</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 02-12-2021 14:42:17</span>
     <br style="clear:left"/>
 </div>
 
@@ -176,10 +171,7 @@
     </thead>
     <tbody>
 
-
         <tr>
-
-
             <td> 
                 <a href="capability_authentication.html">Authentication</a></span>
             </td>
@@ -320,13 +312,9 @@
     </tr>
 </table>
             </td>
-
         </tr>
 
-
         <tr>
-
-
             <td> 
                 <a href="capability_cart.html">Cart</a></span>
             </td>
@@ -467,13 +455,9 @@
     </tr>
 </table>
             </td>
-
         </tr>
 
-
         <tr>
-
-
             <td> 
                 <a href="capability_catalog.html">Catalog</a></span>
             </td>
@@ -481,10 +465,10 @@
                 
             </td>
             <td>10</td>
-            <td>1</td>
+            <td>3</td>
             <td>
-                <span class="status_icon"><a href='##beforetable'><i class='bi bi-hourglass-top pending-icon ' title='PENDING'></i></a></span>
-                <span style="display:none">2</span>
+                <span class="status_icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon ' title='FAILURE'></i></a></span>
+                <span style="display:none">3</span>
             </td>
 
             <td width="165px">
@@ -493,120 +477,120 @@
 <table>
     <tr>
         <td width="40px" style="padding-top:4px;">
-            <div class="small" style="text-align:right;">90.9%</div>
+            <div class="small" style="text-align:right;">84.6%</div>
         </td>
         <td style="min-width:12.5em;">
             <div class="progress">
                 <div class="progress-bar" role="progressbar"
-                     style="width: 90.909091%; background-color:#c5df91;"
-                     aria-valuenow="10"
+                     style="width: 84.615385%; background-color:#c5df91;"
+                     aria-valuenow="11"
                      aria-valuemin="0"
-                     aria-valuemax="11"
-                     title="  - Total tests: 11
-  - Passing tests: 10 (90.9%)
-  - Failing tests: 0 (0%)
+                     aria-valuemax="13"
+                     title="  - Total tests: 13
+  - Passing tests: 11 (84.6%)
+  - Failing tests: 1 (7.7%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Aborted tests: 0 (0%)
-  - Pending tests: 1 (9.1%)
+  - Pending tests: 1 (7.7%)
   - Ignored or skipped tests: 0 (0%)">
                 </div>
                 <div class="progress-bar" role="progressbar"
-                     style="width: 9.090909%; background-color:#cbddea;"
+                     style="width: 7.692308%; background-color:#cbddea;"
                      aria-valuenow="1"
                      aria-valuemin="0"
-                     aria-valuemax="11"
-                     title="  - Total tests: 11
-  - Passing tests: 10 (90.9%)
-  - Failing tests: 0 (0%)
+                     aria-valuemax="13"
+                     title="  - Total tests: 13
+  - Passing tests: 11 (84.6%)
+  - Failing tests: 1 (7.7%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Aborted tests: 0 (0%)
-  - Pending tests: 1 (9.1%)
+  - Pending tests: 1 (7.7%)
   - Ignored or skipped tests: 0 (0%)">
                 </div>
                 <div class="progress-bar" role="progressbar"
                      style="width: 0%; background-color:#cccdc7;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="11"
-                     title="  - Total tests: 11
-  - Passing tests: 10 (90.9%)
-  - Failing tests: 0 (0%)
+                     aria-valuemax="13"
+                     title="  - Total tests: 13
+  - Passing tests: 11 (84.6%)
+  - Failing tests: 1 (7.7%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Aborted tests: 0 (0%)
-  - Pending tests: 1 (9.1%)
+  - Pending tests: 1 (7.7%)
   - Ignored or skipped tests: 0 (0%)">
                 </div>
                 <div class="progress-bar" role="progressbar"
                      style="width: 0%; background-color:#e3c281;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="11"
-                     title="  - Total tests: 11
-  - Passing tests: 10 (90.9%)
-  - Failing tests: 0 (0%)
+                     aria-valuemax="13"
+                     title="  - Total tests: 13
+  - Passing tests: 11 (84.6%)
+  - Failing tests: 1 (7.7%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Aborted tests: 0 (0%)
-  - Pending tests: 1 (9.1%)
+  - Pending tests: 1 (7.7%)
   - Ignored or skipped tests: 0 (0%)">
                 </div>
                 <div class="progress-bar" role="progressbar"
                      style="width: 0%; background-color:#f9c7a7;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="11"
-                     title="  - Total tests: 11
-  - Passing tests: 10 (90.9%)
-  - Failing tests: 0 (0%)
+                     aria-valuemax="13"
+                     title="  - Total tests: 13
+  - Passing tests: 11 (84.6%)
+  - Failing tests: 1 (7.7%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Aborted tests: 0 (0%)
-  - Pending tests: 1 (9.1%)
+  - Pending tests: 1 (7.7%)
   - Ignored or skipped tests: 0 (0%)">
                 </div>
                 <div class="progress-bar" role="progressbar"
-                     style="width: 0%; background-color:#fd938e;"
-                     aria-valuenow="0"
+                     style="width: 7.692308%; background-color:#fd938e;"
+                     aria-valuenow="1"
                      aria-valuemin="0"
-                     aria-valuemax="11"
-                     title="  - Total tests: 11
-  - Passing tests: 10 (90.9%)
-  - Failing tests: 0 (0%)
+                     aria-valuemax="13"
+                     title="  - Total tests: 13
+  - Passing tests: 11 (84.6%)
+  - Failing tests: 1 (7.7%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Aborted tests: 0 (0%)
-  - Pending tests: 1 (9.1%)
+  - Pending tests: 1 (7.7%)
   - Ignored or skipped tests: 0 (0%)">
                 </div>
                 <div class="progress-bar" role="progressbar"
                      style="width: 0%; background-color:#fab186;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="11"
-                     title="  - Total tests: 11
-  - Passing tests: 10 (90.9%)
-  - Failing tests: 0 (0%)
+                     aria-valuemax="13"
+                     title="  - Total tests: 13
+  - Passing tests: 11 (84.6%)
+  - Failing tests: 1 (7.7%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Aborted tests: 0 (0%)
-  - Pending tests: 1 (9.1%)
+  - Pending tests: 1 (7.7%)
   - Ignored or skipped tests: 0 (0%)">
                 </div>
                 <div class="progress-bar" role="progressbar"
                      style="width: 0%; background-color:#fab0f3;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="11"
-                     title="  - Total tests: 11
-  - Passing tests: 10 (90.9%)
-  - Failing tests: 0 (0%)
+                     aria-valuemax="13"
+                     title="  - Total tests: 13
+  - Passing tests: 11 (84.6%)
+  - Failing tests: 1 (7.7%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Aborted tests: 0 (0%)
-  - Pending tests: 1 (9.1%)
+  - Pending tests: 1 (7.7%)
   - Ignored or skipped tests: 0 (0%)">
                 </div>
             </div>
@@ -614,13 +598,9 @@
     </tr>
 </table>
             </td>
-
         </tr>
 
-
         <tr>
-
-
             <td> 
                 <a href="capability_purchases.html">Purchases</a></span>
             </td>
@@ -761,13 +741,9 @@
     </tr>
 </table>
             </td>
-
         </tr>
 
-
         <tr>
-
-
             <td> 
                 <a href="capability_sales_tax.html">Sales tax</a></span>
             </td>
@@ -908,12 +884,9 @@
     </tr>
 </table>
             </td>
-
         </tr>
     </tbody>
 </table>
-
-
 
             </div>
         </div>
@@ -924,7 +897,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12">
-            <span class="version">Serenity BDD version 3.1.0</span>
+            <span class="version">Serenity BDD version 3.1.4</span>
         </div>
     </div>
 </div>

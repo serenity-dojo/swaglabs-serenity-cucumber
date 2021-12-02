@@ -1,3 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Calculating sales tax","Colin sees the correctly calculated sales tax for his order","SUCCESS","2021-11-26T16:36:50.459623337Z[Etc/UTC]","0.0","41.04"
-"Calculating sales tax","Colin purchases two items so the total tax calculated includes tax for both items","SUCCESS","2021-11-26T16:37:31.619814098Z[Etc/UTC]","0.0","4.03"
