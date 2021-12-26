@@ -1,14 +1,14 @@
-Feature: Login
+Feature: Login's all good
 
   Rule: Customers needs to provide valid credentials to access the site
 
-    Example: Colin logs in with valid credentials
+    Example: Colin logs in with Colin's valid credentials
       Given Colin is on the login page
       When Colin logs in with valid credentials
       Then he should be presented the product catalog
 
     @singlebrowser
-    Scenario Outline: Login on with invalid credentials
+    Scenario Outline: Login's with invalid credentials
       Given Colin is on the login page
       When Colin attempts to login with the following credentials:
         | username   | password   |

@@ -12,7 +12,7 @@ buildscript {
     }
   }
   dependencies {
-    classpath "net.serenity-bdd:serenity-gradle-plugin:3.1.4-RC1"
+    classpath "net.serenity-bdd:serenity-gradle-plugin:3.1.15"
   }
 }
 
@@ -27,8 +27,7 @@ targetCompatibility = 17
 
 ext {
     slf4jVersion = '1.7.7'
-    serenityCoreVersion = '3.1.4'
-    serenityCucumberVersion = '3.1.4'
+    serenityCoreVersion = '3.1.5'
     junitVersion = '4.13.1'
     assertJVersion = '3.8.0'
     logbackVersion = '1.2.3'
@@ -38,7 +37,7 @@ dependencies {
     implementation "ch.qos.logback:logback-classic:${logbackVersion}"
 
     testImplementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
-            "net.serenity-bdd:serenity-cucumber:${serenityCucumberVersion}",
+            "net.serenity-bdd:serenity-cucumber:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}",
@@ -52,6 +51,9 @@ test {
     maxParallelForks = 8
 }
 
+//serenity {
+//    testRoot="swaglabs"
+//}
 gradle.startParameter.continueOnFailure = true
 
 test.finalizedBy(aggregate)

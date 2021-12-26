@@ -1,4 +1,4 @@
-@singlebrowser @resetappstate
+@singlebrowser @resetappstate @tax @accounting
 Feature: Calculating sales tax
 
   Background:

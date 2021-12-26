@@ -11,8 +11,11 @@ import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.questions.Text;
 import net.serenitybdd.screenplay.ui.PageElement;
+import net.thucydides.core.reports.html.HtmlAggregateStoryReporter;
 import net.thucydides.core.steps.StepEventBus;
 import net.thucydides.core.util.EnvironmentVariables;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import swaglabs.actions.authentication.ApplicationPage;
 import swaglabs.actions.authentication.Login;
 import swaglabs.actions.errors.ErrorMessages;
@@ -59,11 +62,12 @@ public class LoginStepDefinitions {
         );
     }
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(LoginStepDefinitions.class);
+
     @Then("{actor} should be presented the product catalog")
     public void shouldBeOnHomePage(Actor actor) {
         actor.attemptsTo(
                 Ensure.that(Text.of(".title")).isEqualTo("PRODUCTS")
-//                Ensure.that(PageHeader.title()).isEqualTo("PRODUCTS")
         );
     }
 

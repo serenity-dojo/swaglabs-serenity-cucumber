@@ -1,4 +1,4 @@
-@singlebrowser @resetappstate
+@singlebrowser @resetappstate @tax
 Feature: Completing a purchase
 
   Background:
@@ -13,11 +13,12 @@ Feature: Completing a purchase
         | First Name   | Last Name   | Zip/Post Code   |
         | <First Name> | <Last Name> | <Zip/Post Code> |
       Then he should be presented with the error message <Error Message>
-      Examples:
+      Examples: Some examples
         | First Name | Last Name | Zip/Post Code | Error Message                  |
         |            | Collector | ABC-123       | Error: First Name is required  |
         | Colin      |           | ABC-123       | Error: Last Name is required   |
         | Colin      | Collector |               | Error: Postal Code is required |
+
 
   Rule: Customers should see a summary of their order before they complete their purchase
     Example: Colin purchases two items and sees them both appear in the purchase summary
