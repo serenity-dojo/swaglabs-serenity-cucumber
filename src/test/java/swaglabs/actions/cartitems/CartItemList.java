@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class CartItemList {
-    private static final Target THE_CART_ITEMS = PageElement.locatedBy(".cart_item").describedAs("Cart items");
+    private static final Target THE_CART_ITEMS = PageElement.locatedBy(".cart_item").called("Cart items");
     private static final By ITEM_QUANITTY = By.cssSelector(".cart_quantity");
     private static final By ITEM_DESCRIPTION = By.cssSelector(".inventory_item_name");
     private static final By ITEM_PRICE = By.cssSelector(".inventory_item_price");

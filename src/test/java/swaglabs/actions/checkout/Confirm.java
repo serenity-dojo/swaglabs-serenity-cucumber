@@ -6,6 +6,6 @@ import net.serenitybdd.screenplay.ui.Button;
 
 public class Confirm {
     public static Performable order() {
-        return Click.on(Button.called("Finish"));
+        return Click.on(Button.withText("Finish"));
     }
 }

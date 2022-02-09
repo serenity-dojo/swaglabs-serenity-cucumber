@@ -6,6 +6,6 @@ import net.serenitybdd.screenplay.ui.Link;
 
 public class ViewInventoryItem {
     public static Performable called(String productName) {
-        return Click.on(Link.called(productName));
+        return Click.on(Link.withText(productName));
     }
 }

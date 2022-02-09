@@ -13,7 +13,7 @@ public class ListedItems {
             public Collection<InventoryItem> answeredBy(Actor actor) {
 
 
-                PageElement.called("inventory_item");
+                PageElement.withNameOrId("inventory_item");
 
                 return null;
             }

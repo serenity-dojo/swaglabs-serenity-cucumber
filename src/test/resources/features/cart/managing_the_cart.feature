@@ -22,34 +22,6 @@ Feature: Managing the cart
       When Colin adds "Sauce Labs Backpack" to the cart
       Then the cart item count should be 1
 
-
-    @ignore
-    Example: Colin adds ignored items to the cart
-      Given Colin is browsing the product catalog
-      When Colin adds "Sauce Labs Backpack" to the cart
-      And Colin adds "Sauce Labs Bike Light" to the cart
-      Then the cart item count should be 2
-
-    @pending
-    Example: Colin adds pending items to the cart
-      Given Colin is browsing the product catalog
-      When Colin adds "Sauce Labs Backpack" to the cart
-      And Colin adds "Sauce Labs Bike Light" to the cart
-      Then the cart item count should be 2
-
-    @skip
-    Example: Colin adds skipped items to the cart
-      Given Colin is browsing the product catalog
-      When Colin adds "Sauce Labs Backpack" to the cart
-      And Colin adds "Sauce Labs Bike Light" to the cart
-      Then the cart item count should be 2
-
-    Example: Colin adds several items to the cart
-      Given Colin is browsing the product catalog
-      When Colin adds "Sauce Labs Backpack" to the cart
-      And Colin adds "Sauce Labs Bike Light" to the cart
-      Then the cart item count should be 2
-
   Rule: Customer can remove items from their cart
 
     Example: Colin removes an item from the cart on the product catalog page 2

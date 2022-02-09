@@ -45,8 +45,7 @@ public class CatalogStepDefinitions {
 
         for (Product product : expectedProducts) {
             actor.attemptsTo(
-                    Ensure.that(PageElement.called("inventory_item").containingText(product.title())).isDisplayed(),
-                    Ensure.that(PageElement.called("inventory_item").containingText(product.title())).textContent().contains(product.price())
+                    Ensure.that(PageElement.locatedBy(".inventory_item").containingText(product.title())).textContent().contains(product.price())
             );
         }
     }

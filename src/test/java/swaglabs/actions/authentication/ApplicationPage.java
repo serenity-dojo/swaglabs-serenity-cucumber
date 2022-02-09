@@ -4,5 +4,5 @@ import net.serenitybdd.screenplay.targets.Target;
 import net.serenitybdd.screenplay.ui.PageElement;
 
 public class ApplicationPage {
-    public static Target PRIMARY_HEADER = PageElement.called("primary_header");
+    public static Target PRIMARY_HEADER = PageElement.withNameOrId("primary_header");
 }

@@ -10,7 +10,7 @@ public class Checkout {
     public static Performable theCurrentItemsInTheCart() {
         return Task.where("{0} initiates a checkout",
                 Click.on(CatalogPage.SHOPPING_CART),
-                Click.on(Button.called("Checkout"))
+                Click.on(Button.withText("Checkout"))
         );
     }
 }

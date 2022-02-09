@@ -11,7 +11,7 @@ import net.serenitybdd.screenplay.ui.PageElement;
 import java.util.Collection;
 
 public class CatalogPage {
-    public static final Question<Collection<InventoryItem>> INVENTORY_ITEMS = PageElement.called("inventory_item")
+    public static final Question<Collection<InventoryItem>> INVENTORY_ITEMS = PageElement.withNameOrId("inventory_item")
             .mapAll(element
                     -> new InventoryItem(
                     element.findBy(".inventory_item_name").getText(),
@@ -20,33 +20,32 @@ public class CatalogPage {
                     element.findBy(".inventory_item_img img").getAttribute("src")
             ));
 
-    public static final Target INVENTORY_ITEM_NAME = PageElement.called("inventory_item_name");
+    public static final Target INVENTORY_ITEM_NAME = PageElement.withCSSClass("inventory_item_name");
 
-    public static final Target PRODUCT_SORT = Dropdown.called("product_sort_container");
+    public static final Target PRODUCT_SORT = Dropdown.withNameOrId("product_sort_container");
 
-    private static final String INVENTORY_OR_CART_ITEM = "[class$='cart_item'],[class$='inventory_item']";
+    private static final String INVENTORY_OR_CART_ITEM = ".cart_item,.inventory_item";
 
     public static Target addToCartButtonFor(String item) {
-        return Button.called("Add to cart")
-                .inside(PageElement.called("inventory_item").containingText(item));
+        return Button.withText("Add to cart").called("'the 'Add to cart' button for '" + item + "'")
+                .inside(PageElement.withCSSClass("inventory_item").containingText(item));
     }
 
     public static Target addToCartButton() {
-        return Button.called("Add to cart");
+        return Button.withText("Add to cart");
     }
 
     /**
      * Remove button for an item in the cart or the inventory
      */
     public static Target removeFromCartButtonFor(String item) {
-        return Button.called("Remove")
+        return Button.withText("Remove")
                 .inside(PageElement.locatedBy(INVENTORY_OR_CART_ITEM).containingText(item));
     }
 
     public static Question<Integer> cartCount() {
-        Text.of("#shopping-cart-badge").asInteger();
-        return Text.of(PageElement.called("shopping_cart_badge")).asInteger();
+        return Text.of(PageElement.withCSSClass("shopping_cart_badge")).asInteger();
     }
 
-    public static final Target SHOPPING_CART = Link.called("shopping_cart_link");
+    public static final Target SHOPPING_CART = Link.locatedBy(".shopping_cart_link");
 }

@@ -85,7 +85,7 @@ public class CartStepDefinitions {
     public void shouldSeeItemsHeSelected(Actor actor) {
         List<String> expectedItems = actor.recall("ITEMS");
         actor.attemptsTo(
-                Ensure.that(Text.ofEach(PageElement.called("inventory_item_name")))
+                Ensure.that(Text.ofEach(PageElement.withCSSClass("inventory_item_name")))
                         .containsElementsFrom(expectedItems));
     }
 
@@ -116,19 +116,19 @@ public class CartStepDefinitions {
      */
     @When("{actor} opens the shopping cart")
     public void opensCart(Actor actor) {
-        actor.attemptsTo(Click.on(PageElement.called("shopping_cart_badge")));
+        actor.attemptsTo(Click.on(PageElement.withCSSClass("shopping_cart_badge")));
     }
 
     @When("{actor} continues shopping")
     public void continuesShopping(Actor actor) {
-        actor.attemptsTo(Click.on(Button.called("CONTINUE SHOPPING")));
+        actor.attemptsTo(Click.on(Button.withText("CONTINUE SHOPPING")));
     }
 
 
     @Then("{actor} should see the following items:")
     public void shouldSeeTheFollowingItems(Actor actor, List<String> expectedItems) {
         actor.attemptsTo(
-                Ensure.that(Text.ofEach(PageElement.called("inventory_item_name")))
+                Ensure.that(Text.ofEach(PageElement.withCSSClass("inventory_item_name")))
                                  .containsElementsFrom(expectedItems));
     }
 

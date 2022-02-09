@@ -15,7 +15,7 @@ public class ProvidePersonalDetails {
                 Enter.theValue(customerDetails.lastName()).into(InputField.withPlaceholder("Last Name")),
                 Enter.theValue(customerDetails.postCode()).into(InputField.withPlaceholder("Zip/Postal Code")),
 
-                Click.on(Button.called("Continue"))
+                Click.on(Button.withText("Continue"))
         );
     }
 }
