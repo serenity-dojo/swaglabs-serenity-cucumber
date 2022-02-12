@@ -120,8 +120,10 @@
         <span class="breadcrumbs">
             <a href="index.html" class="breadcrumbs">Home</a>
 
-            > <a href="capability_sales_tax.html">Sales Tax</a>
-            > <a href="feature_sales_tax_sl_calculating_sales_tax.html">Calculating Sales Tax</a>
+ <!-- inflection.of(breadcrumb.displayName).asATitle()-->
+            > <a href="capability_sales_tax.html">Sales tax</a>
+ <!-- inflection.of(breadcrumb.displayName).asATitle()-->
+            > <a href="feature_sales_tax_sl_calculating_sales_tax.html">Calculating sales tax</a>
         > Colin purchases two items so the total tax calculated includes tax for both items
         </span>
         </div>
@@ -146,7 +148,7 @@
             <a href="requirement_type_feature.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 02-12-2021 14:41</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 12-02-2022 09:34</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -168,6 +170,20 @@
 
                         </td>
                         <td valign="top">
+                                <p class="tag">
+                                    <span class="badge tag-badge" style="background:default;">
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;"
+                                                                      href="tag_tax.html">Tax
+                                    (tag)</a>
+                                </span>
+                                </p>
+                                <p class="tag">
+                                    <span class="badge tag-badge" style="background:default;">
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;"
+                                                                      href="tag_accounting.html">Accounting
+                                    (tag)</a>
+                                </span>
+                                </p>
                         </td>
                     </tr>
                 </table>
@@ -216,7 +232,7 @@
                                     <div>
                                         <span class="cast-description">Colin has:</span>
                                         <ul>
-                                                <li>swaglabs.actions.cart.AShoppingCart@724c26e0</li>
+                                                <li>swaglabs.actions.cart.AShoppingCart@223a5dad</li>
                                         </ul>
                                     </div>
                                     <div>
@@ -269,15 +285,61 @@
 
                     <td width="50" class="step-icon">
                         <a name="0"></a>
-                            <span style="margin-left: 20px;"
-                                  class="top-level-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                               style="display:block">
+                                <i class="bi bi-plus-square imgstepSection0 success-icon"
+                                   style="margin-left: 20px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                               style="display:block;">
+                                <span class="top-level-step">
+                                                Given Colin has logged onto the application
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="calculating_sales_tax_colin_purchases_two_items_so_the_total_tax_calculated_includes_tax_for_both_items_screenshots.html#screenshots?screenshot=0">
+                                    <img src="2c9f6c3cc758ebe1f6c68833e53f0d2004f20e295807ebb1cbc6196c205b7f26.png"
+                                         href="2c9f6c3cc758ebe1f6c68833e53f0d2004f20e295807ebb1cbc6196c205b7f26.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="calculating_sales_tax_colin_purchases_two_items_so_the_total_tax_calculated_includes_tax_for_both_items_screenshots.html#screenshots?screenshot=3">
+                                    <img src="312d4a83f36c90641129f23ebf8afd0aac4c1c0bfc4cf021fcaaa271827764f0.png"
+                                         href="312d4a83f36c90641129f23ebf8afd0aac4c1c0bfc4cf021fcaaa271827764f0.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">1s 359ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="0-0"></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
                                 </span>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
-                                <span class="top-level-step">
-                                                Given Colin has logged onto the application
+                                <span class="nested-group-step">
+                                                Colin opens the https://www.saucedemo.com
                                         </span>
                             <span class="evidence">
                                 </span>
@@ -286,16 +348,20 @@
 
                         <td width="160" class="SUCCESS-text">
 
-                                <a href="calculating_sales_tax_colin_purchases_two_items_so_the_total_tax_calculated_includes_tax_for_both_items_screenshots.html#screenshots?screenshot=1">
-                                    <img src="35d0f1cee70627a7b0c7b17b434068ec32ec05cbcb531ad88ddf7029e11a09eb.png"
-                                         href="35d0f1cee70627a7b0c7b17b434068ec32ec05cbcb531ad88ddf7029e11a09eb.png"
+                                <a href="calculating_sales_tax_colin_purchases_two_items_so_the_total_tax_calculated_includes_tax_for_both_items_screenshots.html#screenshots?screenshot=2">
+                                    <img src="2c9f6c3cc758ebe1f6c68833e53f0d2004f20e295807ebb1cbc6196c205b7f26.png"
+                                         href="2c9f6c3cc758ebe1f6c68833e53f0d2004f20e295807ebb1cbc6196c205b7f26.png"
                                          class="screenshot"
                                          width="48" height="48"/>
                                 </a>
                         </td>
-                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">1s 058ms</span></td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">153ms</span></td>
                 </tr>
+
+                            </table>
+                        </td>
+                    </tr>
                 <tr class="test-SUCCESS">
 
                     <td width="50" class="step-icon">
@@ -317,15 +383,15 @@
 
                         <td width="160" class="SUCCESS-text">
 
-                                <a href="calculating_sales_tax_colin_purchases_two_items_so_the_total_tax_calculated_includes_tax_for_both_items_screenshots.html#screenshots?screenshot=2">
-                                    <img src="35d0f1cee70627a7b0c7b17b434068ec32ec05cbcb531ad88ddf7029e11a09eb.png"
-                                         href="35d0f1cee70627a7b0c7b17b434068ec32ec05cbcb531ad88ddf7029e11a09eb.png"
+                                <a href="calculating_sales_tax_colin_purchases_two_items_so_the_total_tax_calculated_includes_tax_for_both_items_screenshots.html#screenshots?screenshot=5">
+                                    <img src="312d4a83f36c90641129f23ebf8afd0aac4c1c0bfc4cf021fcaaa271827764f0.png"
+                                         href="312d4a83f36c90641129f23ebf8afd0aac4c1c0bfc4cf021fcaaa271827764f0.png"
                                          class="screenshot"
                                          width="48" height="48"/>
                                 </a>
                         </td>
                     <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">470ms</span></td>
+                    <td width="100"><span class="top-level-step">014ms</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
 
@@ -353,7 +419,7 @@
 
                         <td width="160" class="SUCCESS-text">
 
-                                <a href="calculating_sales_tax_colin_purchases_two_items_so_the_total_tax_calculated_includes_tax_for_both_items_screenshots.html#screenshots?screenshot=5">
+                                <a href="calculating_sales_tax_colin_purchases_two_items_so_the_total_tax_calculated_includes_tax_for_both_items_screenshots.html#screenshots?screenshot=8">
                                     <img src="1a5f100674e5d7a62aff36d83c684b23fbb7e04ceb3c4c7d40e68a1a1ed267b5.png"
                                          href="1a5f100674e5d7a62aff36d83c684b23fbb7e04ceb3c4c7d40e68a1a1ed267b5.png"
                                          class="screenshot"
@@ -361,7 +427,7 @@
                                 </a>
                         </td>
                     <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">762ms</span></td>
+                    <td width="100"><span class="top-level-step">186ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -387,7 +453,7 @@
 
                         <td width="160" class="SUCCESS-text">
 
-                                <a href="calculating_sales_tax_colin_purchases_two_items_so_the_total_tax_calculated_includes_tax_for_both_items_screenshots.html#screenshots?screenshot=4">
+                                <a href="calculating_sales_tax_colin_purchases_two_items_so_the_total_tax_calculated_includes_tax_for_both_items_screenshots.html#screenshots?screenshot=7">
                                     <img src="1a5f100674e5d7a62aff36d83c684b23fbb7e04ceb3c4c7d40e68a1a1ed267b5.png"
                                          href="1a5f100674e5d7a62aff36d83c684b23fbb7e04ceb3c4c7d40e68a1a1ed267b5.png"
                                          class="screenshot"
@@ -395,7 +461,7 @@
                                 </a>
                         </td>
                     <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">742ms</span></td>
+                    <td width="100"><span class="nested-group-step">179ms</span></td>
                 </tr>
 
                             </table>
@@ -427,7 +493,7 @@
 
                         <td width="160" class="SUCCESS-text">
 
-                                <a href="calculating_sales_tax_colin_purchases_two_items_so_the_total_tax_calculated_includes_tax_for_both_items_screenshots.html#screenshots?screenshot=10">
+                                <a href="calculating_sales_tax_colin_purchases_two_items_so_the_total_tax_calculated_includes_tax_for_both_items_screenshots.html#screenshots?screenshot=13">
                                     <img src="1a5f100674e5d7a62aff36d83c684b23fbb7e04ceb3c4c7d40e68a1a1ed267b5.png"
                                          href="1a5f100674e5d7a62aff36d83c684b23fbb7e04ceb3c4c7d40e68a1a1ed267b5.png"
                                          class="screenshot"
@@ -435,7 +501,7 @@
                                 </a>
                         </td>
                     <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">1s 397ms</span></td>
+                    <td width="100"><span class="top-level-step">206ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -461,7 +527,7 @@
 
                         <td width="160" class="SUCCESS-text">
 
-                                <a href="calculating_sales_tax_colin_purchases_two_items_so_the_total_tax_calculated_includes_tax_for_both_items_screenshots.html#screenshots?screenshot=7">
+                                <a href="calculating_sales_tax_colin_purchases_two_items_so_the_total_tax_calculated_includes_tax_for_both_items_screenshots.html#screenshots?screenshot=10">
                                     <img src="1a5f100674e5d7a62aff36d83c684b23fbb7e04ceb3c4c7d40e68a1a1ed267b5.png"
                                          href="1a5f100674e5d7a62aff36d83c684b23fbb7e04ceb3c4c7d40e68a1a1ed267b5.png"
                                          class="screenshot"
@@ -469,7 +535,7 @@
                                 </a>
                         </td>
                     <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">483ms</span></td>
+                    <td width="100"><span class="nested-group-step">033ms</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
 
@@ -492,7 +558,7 @@
 
                         <td width="160" class="SUCCESS-text">
 
-                                <a href="calculating_sales_tax_colin_purchases_two_items_so_the_total_tax_calculated_includes_tax_for_both_items_screenshots.html#screenshots?screenshot=8">
+                                <a href="calculating_sales_tax_colin_purchases_two_items_so_the_total_tax_calculated_includes_tax_for_both_items_screenshots.html#screenshots?screenshot=11">
                                     <img src="1a5f100674e5d7a62aff36d83c684b23fbb7e04ceb3c4c7d40e68a1a1ed267b5.png"
                                          href="1a5f100674e5d7a62aff36d83c684b23fbb7e04ceb3c4c7d40e68a1a1ed267b5.png"
                                          class="screenshot"
@@ -500,7 +566,7 @@
                                 </a>
                         </td>
                     <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">378ms</span></td>
+                    <td width="100"><span class="nested-group-step">139ms</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
 
@@ -523,7 +589,7 @@
 
                         <td width="160" class="SUCCESS-text">
 
-                                <a href="calculating_sales_tax_colin_purchases_two_items_so_the_total_tax_calculated_includes_tax_for_both_items_screenshots.html#screenshots?screenshot=9">
+                                <a href="calculating_sales_tax_colin_purchases_two_items_so_the_total_tax_calculated_includes_tax_for_both_items_screenshots.html#screenshots?screenshot=12">
                                     <img src="1a5f100674e5d7a62aff36d83c684b23fbb7e04ceb3c4c7d40e68a1a1ed267b5.png"
                                          href="1a5f100674e5d7a62aff36d83c684b23fbb7e04ceb3c4c7d40e68a1a1ed267b5.png"
                                          class="screenshot"
@@ -531,7 +597,7 @@
                                 </a>
                         </td>
                     <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">488ms</span></td>
+                    <td width="100"><span class="nested-group-step">023ms</span></td>
                 </tr>
 
                             </table>
@@ -540,7 +606,7 @@
             <tr class="test-SUCCESS">
                     <td colspan="3"></td>
                 <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                <td width="100"><span class="top-level-step"><em>4.02s</em></span></td>
+                <td width="100"><span class="top-level-step"><em>1.85s</em></span></td>
             </tr>
 
         </table>
@@ -553,7 +619,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12">
-            <span class="version">Serenity BDD version 3.1.4</span>
+            <span class="version">Serenity BDD version 3.2.0</span>
         </div>
     </div>
 </div>

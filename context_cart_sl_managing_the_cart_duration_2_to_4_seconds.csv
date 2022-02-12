@@ -1,3 +1,4 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Managing the cart","Colin views the details of a product and adds it to his cart 2","SUCCESS","2021-12-02T14:41:49.36752459Z[Etc/UTC]","0.0","2.6"
-"Managing the cart","Colin sees every item he has added in the cart","SUCCESS","2021-12-02T14:41:52.006929616Z[Etc/UTC]","0.0","2.26"
+"Managing the cart","Colin removes an item from the cart overview","SUCCESS","2022-02-12T09:35:07.577147047Z[Etc/UTC]","0.0","3.86"
+"Managing the cart","Colin views the details of a product and adds it to his cart 2","SUCCESS","2022-02-12T09:35:11.540702178Z[Etc/UTC]","0.0","3.78"
+"Managing the cart","Colin sees every item he has added in the cart","SUCCESS","2022-02-12T09:35:15.436714646Z[Etc/UTC]","0.0","3.2"

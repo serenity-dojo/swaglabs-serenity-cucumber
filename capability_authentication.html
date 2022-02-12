@@ -144,7 +144,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [{"text":"Authentication","type":"capability","href":"capability_authentication.html","nodes":[{"text":"Login","type":"feature","href":"feature_authentication_sl_login.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-check-circle-fill success-icon \u0027 title\u003d\u0027SUCCESS\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e2 scenarios\u003c/span\u003e"]}],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-check-circle-fill success-icon \u0027 title\u003d\u0027SUCCESS\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e1 feature\u003c/span\u003e"]}];
+            var requirementsTree = [{"text":"Authentication","type":"capability","href":"capability_authentication.html","nodes":[{"text":"Login\u0027s all good","type":"feature","href":"feature_authentication_sl_login_sq_s_all_good.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-check-circle-fill success-icon \u0027 title\u003d\u0027SUCCESS\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e2 scenarios\u003c/span\u003e"]}],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-check-circle-fill success-icon \u0027 title\u003d\u0027SUCCESS\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e1 feature\u003c/span\u003e"]}];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -218,7 +218,7 @@
             <a href="requirement_type_feature.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 02-12-2021 14:40</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 12-02-2022 09:33</span>
     <br style="clear:left"/>
 </div>
 
@@ -325,34 +325,34 @@
                                                         <tbody>
                                                             <tr class="scenario-result SUCCESS">
                                                                     <td>
-                                                                            <a href="feature_authentication_sl_login.html">Login</a>
+                                                                            <a href="feature_authentication_sl_login_sq_s_all_good.html">Login's all good</a>
                                                                     </td>
                                                                 <td>
-                                                                        <a href="login_colin_logs_in_with_valid_credentials.html">Colin logs in with valid credentials</a>
+                                                                        <a href="login_s_all_good_colin_logs_in_with_colin_s_valid_credentials.html">Colin logs in with Colin's valid credentials</a>
                                                                 </td>
                                                                 <td>3</td>
-                                                                <td>14:40:19</td>
-                                                                <td>34s 652ms</td>
+                                                                <td>09:33:57</td>
+                                                                <td>17s 186ms</td>
                                                                 <td>
                                                                         <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                             style="display:none">SUCCESS</span>
-                                                                </td>
+                                                                                                                                    </td>
                                                             </tr>
                                                             <tr class="scenario-result SUCCESS">
                                                                     <td>
-                                                                            <a href="feature_authentication_sl_login.html">Login</a>
+                                                                            <a href="feature_authentication_sl_login_sq_s_all_good.html">Login's all good</a>
                                                                     </td>
                                                                 <td>
-                                                                        <a href="login_login_on_with_invalid_credentials.html">Login on with invalid credentials</a>
+                                                                        <a href="login_s_all_good_login_s_with_invalid_credentials.html">Login's with invalid credentials</a>
                                                                         (4 examples)
                                                                 </td>
                                                                 <td>3</td>
-                                                                <td>14:40:54</td>
-                                                                <td>28s 230ms</td>
+                                                                <td>09:34:15</td>
+                                                                <td>4s 604ms</td>
                                                                 <td>
                                                                         <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                             style="display:none">SUCCESS</span>
-                                                                </td>
+                                                                                                                                    </td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -380,7 +380,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12">
-                    <span class="version">Serenity BDD version 3.1.4</span>
+                    <span class="version">Serenity BDD version 3.2.0</span>
                 </div>
             </div>
         </div>
@@ -409,7 +409,7 @@
             datasets: [{
                 label: 'Test Results',
                 fill: false,
-                data: [5,0,0,0,0,0,0,0],
+                data: [{meta: 'Passing tests (automated)', value: 5}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Aborted tests (automated)', value: 0}, {meta: 'Aborted tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}],
                 backgroundColor: ['rgba(153,204,51,0.5)',pattern.draw('line', 'rgba(165, 199, 238, 0.5)'),pattern.draw('line-vertical', 'rgba(168, 168, 168, 0.5)'),pattern.draw('diagonal', 'rgba(238, 224, 152, 0.75)'),pattern.draw('diagonal-right-left', 'rgba(255, 153, 102, 0.5)'),pattern.draw('zigzag-vertical', 'rgba(255, 22, 49, 0.5)'),pattern.draw('zigzag', 'rgba(255, 97, 8, 0.5)'),pattern.draw('square', 'rgba(255, 104, 255, 0.5)')],
                 borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)'],
                 borderWidth: 1,
@@ -588,7 +588,7 @@
             datasets: [{
                 label: 'Number of tests per duration',
                 fill: false,
-                data: ['0','0','0','0','0','4','1','0'],
+                data: ['4','4','0','0','0','1','0','0'],
                 backgroundColor: 'rgba(83, 146, 255,0.5)',
                 borderColor: 'rgba(83, 146, 255, 1)',
             }]

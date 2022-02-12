@@ -1,2 +1,2 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Login","Login on with invalid credentials","SUCCESS","2021-12-02T14:40:54.467250638Z[Etc/UTC]","0.0","28.23"
+"Login's all good","Colin logs in with Colin's valid credentials","SUCCESS","2022-02-12T09:33:57.817873796Z[Etc/UTC]","0.0","17.19"
