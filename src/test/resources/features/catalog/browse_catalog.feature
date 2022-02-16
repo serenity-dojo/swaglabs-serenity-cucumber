@@ -1,4 +1,5 @@
 @singlebrowser
+@catalog
 Feature: Browse the catalog
 
   Background:

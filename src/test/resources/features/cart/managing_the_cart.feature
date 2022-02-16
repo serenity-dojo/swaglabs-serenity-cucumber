@@ -1,4 +1,5 @@
 #@singlebrowser @resetappstate
+@cart
 Feature: Managing the cart
 
   Background:

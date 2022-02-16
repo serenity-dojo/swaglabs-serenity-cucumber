@@ -11,6 +11,7 @@ import net.serenitybdd.screenplay.questions.Text;
 import net.serenitybdd.screenplay.ui.Link;
 import net.serenitybdd.screenplay.ui.PageElement;
 import net.serenitybdd.screenplay.ui.Select;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import swaglabs.actions.authentication.Login;
 import swaglabs.actions.catalog.CatalogPage;
 import swaglabs.actions.catalog.ProductDetailsPage;
