@@ -1,3 +1,3 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Login's all good","Login's with invalid credentials","SUCCESS","2022-02-12T09:34:15.148668211Z[Etc/UTC]","0.0","4.6"
-"Calculating sales tax","Colin purchases two items so the total tax calculated includes tax for both items","SUCCESS","2022-02-12T09:34:45.540375229Z[Etc/UTC]","0.0","1.85"
+"Login's all good","Login's with invalid credentials","SUCCESS","2022-02-16T10:14:58.625025281Z[Etc/UTC]","0.0","4.67"
+"Calculating sales tax","Colin purchases two items so the total tax calculated includes tax for both items","SUCCESS","2022-02-16T10:15:29.585572543Z[Etc/UTC]","0.0","1.94"
