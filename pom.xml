@@ -11,7 +11,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <serenity.version>3.2.0</serenity.version>
+        <serenity.version>3.2.1-RC1</serenity.version>
         <encoding>UTF-8</encoding>
         <tags></tags>
         <webdriver.base.url></webdriver.base.url>
@@ -114,7 +114,7 @@
                     <includes>
                         <include>**/*Suite.java</include>
                     </includes>
-                    <parallel>methods</parallel>
+                    <parallel>classes</parallel>
                     <threadCount>8</threadCount>
 <!--                    <useUnlimitedThreads>true</useUnlimitedThreads>-->
 <!--                    <forkCount>8</forkCount>-->

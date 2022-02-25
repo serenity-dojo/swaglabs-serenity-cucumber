@@ -37,20 +37,5 @@ Feature: Browse the catalog
         | Sauce Labs Bolt T-Shirt  | $15.99 | Get your testing superhero                                                   |
         | Sauce Labs Fleece Jacket | $49.99 | a midweight quarter-zip fleece jacket                                        |
 
-  Rule: Customers should be able to sort product details to see the products they are most interested in
-
-    Scenario Outline: Sort products
-      Given Colin is browsing the product catalog
-      When he filters the products by <Sort Order>
-      Then the first product displayed should be <First Product>
-      Examples:
-        | Sort Order          | First Product                     |
-        | Price (low to high) | Sauce Labs Onesie                 |
-        | Price (high to low) | Sauce Labs Fleece Jacket          |
-        | Name (A to Z)       | Sauce Labs Backpack               |
-        | Name (Z to A)       | Test.allTheThings() T-Shirt (Red) |
-
-
-
 
 
