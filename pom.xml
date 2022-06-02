@@ -149,6 +149,7 @@
                         <include>**/When*.java</include>
                     </includes>
                     <parallel>methods</parallel>
+<!--                    <threadCount>4</threadCount>-->
                     <useUnlimitedThreads>true</useUnlimitedThreads>
                 </configuration>
                 <executions>
