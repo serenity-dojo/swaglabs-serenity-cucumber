@@ -2,6 +2,7 @@ package swaglabs.actions.cart;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
+import net.serenitybdd.screenplay.actions.Evaluate;
 import net.serenitybdd.screenplay.facts.Fact;
 import swaglabs.model.InventoryItem;
 
@@ -39,8 +40,9 @@ public class AShoppingCart implements Fact {
 
     @Override
     public void setup(Actor actor) {
-        BrowseTheWeb.as(actor)
-                    .evaluateJavascript("window.localStorage.setItem('cart-contents','[" + commaSeparatedItemIds() + "]')");
+        actor.attemptsTo(
+                Evaluate.javascript("window.localStorage.setItem('cart-contents','[" + commaSeparatedItemIds() + "]')")
+        );
     }
 
     @Override

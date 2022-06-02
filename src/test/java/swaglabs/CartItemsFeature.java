@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         plugin = {"pretty"},
-        features = "classpath:features/authentication"
+        features = "src/test/resources/features/cart",
+        tags = "not pending and not ignore"
 )
-public class LoginTestSuite {}
+public class CartItemsFeature {}

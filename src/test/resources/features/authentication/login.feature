@@ -24,4 +24,3 @@ Feature: Login's all good
         | unknown_user    | secret_sauce   | Username and password do not match any user in this service |
         | unknown_user    | wrong_password | Username and password do not match any user in this service |
         | locked_out_user | secret_sauce   | Sorry, this user has been locked out.                       |
-

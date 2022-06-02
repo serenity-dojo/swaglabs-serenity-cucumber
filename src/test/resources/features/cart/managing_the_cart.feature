@@ -43,6 +43,7 @@ Feature: Managing the cart
         | Sauce Labs Bike Light |
 
   Rule: Users can add a product to the cart from the product details
+    @ignore
     Example: Colin views the details of a product and adds it to his cart 2
       Given Colin is browsing the product catalog
       And Colin has opened the product details for "Sauce Labs Bike Light"
@@ -50,6 +51,7 @@ Feature: Managing the cart
       Then the cart item count should be 1
 
   Rule: Users can view the contents of their cart
+    @pending
     Example: Colin sees every item he has added in the cart
       Given Colin has the following item in his cart:
         | Sauce Labs Backpack   |

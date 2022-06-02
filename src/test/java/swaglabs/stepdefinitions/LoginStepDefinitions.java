@@ -56,6 +56,7 @@ public class LoginStepDefinitions {
                     Login.as(actor.getName())
             );
         }
+        System.out.println("THREAD: " + Thread.currentThread());
     }
 
     @When("{actor} logs in with valid credentials")

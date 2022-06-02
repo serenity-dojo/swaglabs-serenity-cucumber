@@ -16,7 +16,7 @@ Feature: Filtering products
         | Price (high to low) | Sauce Labs Fleece Jacket          |
       Examples: Sort by name
         | Sort Order          | First Product                     |
-        | Name (A to Z)       | Sauce Labs Backpack               |
+        | Name (A to Z)       | Sauce Labs Backpack              |
         | Name (Z to A)       | Test.allTheThings() T-Shirt (Red) |
 
 
