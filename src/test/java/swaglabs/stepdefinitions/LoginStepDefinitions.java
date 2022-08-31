@@ -17,6 +17,8 @@ import net.thucydides.core.annotations.WithDriver;
 import net.thucydides.core.reports.html.HtmlAggregateStoryReporter;
 import net.thucydides.core.steps.StepEventBus;
 import net.thucydides.core.util.EnvironmentVariables;
+import org.assertj.core.api.Assertions;
+import org.assertj.core.api.SoftAssertions;
 import org.openqa.selenium.Cookie;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -42,6 +44,7 @@ public class LoginStepDefinitions {
     EnvironmentVariables environmentVariables;
     @Given("{actor} is on the login page")
     public void onTheLoginPage(Actor actor) {
+        System.out.println("RUNNING ON THREAD " + Thread.currentThread());
         actor.attemptsTo(Open.url("https://www.saucedemo.com/"));
     }
 
@@ -50,6 +53,7 @@ public class LoginStepDefinitions {
      */
     @Given("{actor} has logged onto the application")
     public void aRegisteredUser(Actor actor) {
+        System.out.println("RUNNING IN THREAD: " + Thread.currentThread());
         if (!ApplicationPage.PRIMARY_HEADER.isVisibleFor(actor)) {
             actor.attemptsTo(
                     Open.url("https://www.saucedemo.com"),
@@ -66,13 +70,26 @@ public class LoginStepDefinitions {
         );
     }
 
+    @Then("there should be no download page source button")
+    public void fail() {
+        Assertions.assertThat(true).isFalse();
+    }
+
     private static final Logger LOGGER = LoggerFactory.getLogger(LoginStepDefinitions.class);
+
+    SoftAssertions softly = new SoftAssertions();
 
     @Then("{actor} should be presented the product catalog")
     public void shouldBeOnHomePage(Actor actor) {
         actor.attemptsTo(
                 Ensure.that(Text.of(".title")).isEqualTo("PRODUCTS")
         );
+        //softly.assertThat(true).isFalse();
+    }
+
+    @After
+    public void assertAll() {
+        softly.assertAll();
     }
 
     @When("{actor} attempts to login with the following credentials:")
