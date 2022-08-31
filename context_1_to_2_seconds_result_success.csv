@@ -1,6 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Browse the catalog","Colin reviews our range of products","SUCCESS","2022-02-25T14:48:33.038083252Z[Etc/UTC]","0.0","1.92"
-"Login's all good","Login's with invalid credentials","SUCCESS","2022-02-25T14:47:39.518349024Z[Etc/UTC]","0.0","4.27"
-"Completing a purchase","Colin confirms his order and is told that the items have been dispatched","SUCCESS","2022-02-25T14:48:00.397910953Z[Etc/UTC]","0.0","1.78"
-"Calculating sales tax","Colin sees the correctly calculated sales tax for his order","SUCCESS","2022-02-25T14:48:02.831591726Z[Etc/UTC]","0.0","3.76"
-"Calculating sales tax","Colin purchases two items so the total tax calculated includes tax for both items","SUCCESS","2022-02-25T14:48:06.594720334Z[Etc/UTC]","0.0","1.84"

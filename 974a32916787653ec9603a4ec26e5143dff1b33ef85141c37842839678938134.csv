@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Managing the cart","Colin adds an item to the cart","SUCCESS","2022-08-31T12:08:24.005574214Z[Etc/UTC]","0.0","5.79"
+"Managing the cart","Colin removes an item from the cart on the product catalog page 2","SUCCESS","2022-08-31T12:08:29.91963553Z[Etc/UTC]","0.0","7.03"
+"Managing the cart","Colin removes an item from the cart overview","SUCCESS","2022-08-31T12:08:37.0287923Z[Etc/UTC]","0.0","4.59"

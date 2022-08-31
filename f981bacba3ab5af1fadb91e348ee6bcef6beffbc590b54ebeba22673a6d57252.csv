@@ -1,0 +1,7 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Calculator","Rounding down","SUCCESS","2022-08-31T12:07:40.988423917Z[Etc/UTC]","0.0","62.53"
+"Managing the cart","Colin adds items to the cart","SUCCESS","2022-08-31T12:07:40.96946336Z[Etc/UTC]","0.0","43.03"
+"Browse the catalog","Colin reviews our range of products","SUCCESS","2022-08-31T12:07:40.975461773Z[Etc/UTC]","0.0","19.61"
+"Login's all good","Colin logs in with Colin's valid credentials","SUCCESS","2022-08-31T12:07:40.969306857Z[Etc/UTC]","0.0","24.57"
+"Completing a purchase","Colin enters incomplete name and address info","SUCCESS","2022-08-31T12:07:40.969380059Z[Etc/UTC]","0.0","50.26"
+"Calculating sales tax","Colin sees the correctly calculated sales tax for his order","SUCCESS","2022-08-31T12:07:40.98330312Z[Etc/UTC]","0.0","30.33"

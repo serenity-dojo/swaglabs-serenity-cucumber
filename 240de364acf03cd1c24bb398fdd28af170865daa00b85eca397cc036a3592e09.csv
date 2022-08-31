@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Completing a purchase","Colin enters incomplete name and address info","SUCCESS","2022-08-31T12:07:40.969380059Z[Etc/UTC]","0.0","50.26"
+"Completing a purchase","Colin purchases two items and sees them both appear in the purchase summary","SUCCESS","2022-08-31T12:08:31.259429492Z[Etc/UTC]","0.0","4.47"
+"Completing a purchase","Colin confirms his order and is told that the items have been dispatched","SUCCESS","2022-08-31T12:08:35.738875036Z[Etc/UTC]","0.0","3.3"
+"Calculating sales tax","Colin sees the correctly calculated sales tax for his order","SUCCESS","2022-08-31T12:07:40.98330312Z[Etc/UTC]","0.0","30.33"
+"Calculating sales tax","Colin purchases two items so the total tax calculated includes tax for both items","SUCCESS","2022-08-31T12:08:11.322273738Z[Etc/UTC]","0.0","5.9"

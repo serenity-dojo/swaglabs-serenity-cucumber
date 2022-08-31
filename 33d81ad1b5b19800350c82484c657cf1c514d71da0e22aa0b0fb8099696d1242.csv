@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Completing a purchase","Colin enters incomplete name and address info","SUCCESS","2022-08-31T12:07:40.969380059Z[Etc/UTC]","0.0","50.26"
+"Calculating sales tax","Colin sees the correctly calculated sales tax for his order","SUCCESS","2022-08-31T12:07:40.98330312Z[Etc/UTC]","0.0","30.33"

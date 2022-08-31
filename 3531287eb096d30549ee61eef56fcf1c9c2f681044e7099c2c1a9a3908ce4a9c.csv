@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Calculator","Rounding down","SUCCESS","2022-08-31T12:07:40.988423917Z[Etc/UTC]","0.0","62.53"
+"Managing the cart","Colin adds items to the cart","SUCCESS","2022-08-31T12:07:40.96946336Z[Etc/UTC]","0.0","43.03"
+"Completing a purchase","Colin enters incomplete name and address info","SUCCESS","2022-08-31T12:07:40.969380059Z[Etc/UTC]","0.0","50.26"

@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity and Cucumber Quick Start</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="24fb27719c0827397394d92ffbf79e5adbe4dae7d5069c66cb53321f2ca71ef3.html">Completing A Purchase</a></span>
+                > <span class="truncate-60"><a
+                    href="64718b8ad3fca2301a666c089bc33548b219656a6386e56ec05cef38b317f65a.html">Colin enters incomplete name and address info </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="bi bi-chat-text"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 31-08-2022 12:07</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Completing A Purchase </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="31018f506ba8d17ad878b827ae3303082d80a7ae4fc79f5560b7965d4ed3b174.html">Tax
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Colin enters incomplete name and address info
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given Colin is browsing the product catalog<br>And Colin has selected an item and checked out his cart<br>When he provides the following personal details:<br><table class='embedded'><thead><th>First Name</th><th>Last Name</th><th>Zip/Post Code</th></thead><tbody><tr><td>&lt;First Name&gt;</td><td>&lt;Last Name&gt;</td><td>&lt;Zip/Post Code&gt;</td></tr></tbody></table><br>Then he should be presented with the error message &lt;Error Message&gt;</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="312d4a83f36c90641129f23ebf8afd0aac4c1c0bfc4cf021fcaaa271827764f0.png" title=" 1: Colin enters incomplete name and address info ({First Name=, Last Name=Collector, Zip/Post Code=ABC-123, Error Message=Error: First Name is required})" width="1366"/>
+                <img src="312d4a83f36c90641129f23ebf8afd0aac4c1c0bfc4cf021fcaaa271827764f0.png" title=" Given Colin has logged onto the application" width="1366"/>
+                <img src="312d4a83f36c90641129f23ebf8afd0aac4c1c0bfc4cf021fcaaa271827764f0.png" title=" Colin opens the browser at https://www.saucedemo.com" width="1366"/>
+                <img src="312d4a83f36c90641129f23ebf8afd0aac4c1c0bfc4cf021fcaaa271827764f0.png" title=" Given Colin has logged onto the application (completed)" width="1366"/>
+                <img src="312d4a83f36c90641129f23ebf8afd0aac4c1c0bfc4cf021fcaaa271827764f0.png" title=" Given Colin is browsing the product catalog" width="1366"/>
+                <img src="312d4a83f36c90641129f23ebf8afd0aac4c1c0bfc4cf021fcaaa271827764f0.png" title=" Colin opens the browser at https://www.saucedemo.com/inventory.html" width="1366"/>
+                <img src="1bd1268f1e1be5f3bf96bd82ecbea1d53f437139494bd2415be950dd44c0cc85.png" title=" Colin opens the browser at https://www.saucedemo.com/inventory.html (completed)" width="1366"/>
+                <img src="1bd1268f1e1be5f3bf96bd82ecbea1d53f437139494bd2415be950dd44c0cc85.png" title=" Given Colin is browsing the product catalog (completed)" width="1366"/>
+                <img src="1bd1268f1e1be5f3bf96bd82ecbea1d53f437139494bd2415be950dd44c0cc85.png" title=" And Colin has selected an item and checked out his cart" width="1366"/>
+                <img src="1bd1268f1e1be5f3bf96bd82ecbea1d53f437139494bd2415be950dd44c0cc85.png" title=" Colin clicks on 'the 'Add to cart' button for 'Sauce Labs Onesie'" width="1366"/>
+                <img src="3332eae66dda6c4bebd87897c19b841f762505f987933f6b528b3684ec11145b.png" title=" Colin clicks on 'the 'Add to cart' button for 'Sauce Labs Onesie' (completed)" width="1366"/>
+                <img src="3332eae66dda6c4bebd87897c19b841f762505f987933f6b528b3684ec11145b.png" title=" Colin initiates a checkout" width="1366"/>
+                <img src="3332eae66dda6c4bebd87897c19b841f762505f987933f6b528b3684ec11145b.png" title=" Colin clicks on the link" width="1366"/>
+                <img src="f663e6224d6c737546d1b0559e1e64b6a9dae0bdcf23d53692164bde6e23b466.png" title=" Colin clicks on the link (completed)" width="1366"/>
+                <img src="f663e6224d6c737546d1b0559e1e64b6a9dae0bdcf23d53692164bde6e23b466.png" title=" Colin clicks on 'Checkout' button" width="1366"/>
+                <img src="2ceb07e030b6283744d7db29c092479767c7fe20164bc72d4b239171d3053dcf.png" title=" Colin clicks on 'Checkout' button (completed)" width="1366"/>
+                <img src="2ceb07e030b6283744d7db29c092479767c7fe20164bc72d4b239171d3053dcf.png" title=" Colin initiates a checkout (completed)" width="1366"/>
+                <img src="2ceb07e030b6283744d7db29c092479767c7fe20164bc72d4b239171d3053dcf.png" title=" And Colin has selected an item and checked out his cart (completed)" width="1366"/>
+                <img src="2ceb07e030b6283744d7db29c092479767c7fe20164bc72d4b239171d3053dcf.png" title=" When he provides the following personal details:
+| First Name | Last Name | Zip/Post Code |
+|  | Collector | ABC-123 |" width="1366"/>
+                <img src="2ceb07e030b6283744d7db29c092479767c7fe20164bc72d4b239171d3053dcf.png" title=" he provides personal details: CustomerDetails[firstName=null, lastName=Collector, postCode=ABC-123]" width="1366"/>
+                <img src="2ceb07e030b6283744d7db29c092479767c7fe20164bc72d4b239171d3053dcf.png" title=" he enters '' into 'First Name' field" width="1366"/>
+                <img src="e42f0e021e0fc57263f5b4b9f5ca437a7737b3d9163c30a23f2cd563881e860b.png" title=" he enters '' into 'First Name' field (completed)" width="1366"/>
+                <img src="e42f0e021e0fc57263f5b4b9f5ca437a7737b3d9163c30a23f2cd563881e860b.png" title=" he enters 'Collector' into 'Last Name' field" width="1366"/>
+                <img src="38f977e0634eb9b506c4c316ac951b96566b1537833ed5d1df03731fe5cb155d.png" title=" he enters 'Collector' into 'Last Name' field (completed)" width="1366"/>
+                <img src="38f977e0634eb9b506c4c316ac951b96566b1537833ed5d1df03731fe5cb155d.png" title=" he enters 'ABC-123' into 'Zip/Postal Code' field" width="1366"/>
+                <img src="3e2d8f20d7aba12286158ea394d3e0a113351478fe62ebb6bf3019e87a83dd13.png" title=" he enters 'ABC-123' into 'Zip/Postal Code' field (completed)" width="1366"/>
+                <img src="3e2d8f20d7aba12286158ea394d3e0a113351478fe62ebb6bf3019e87a83dd13.png" title=" he clicks on 'Continue' button" width="1366"/>
+                <img src="25fa4f2755422058bac3baa019687b6165803bc96b9620fe22fbd6497bce8238.png" title=" he clicks on 'Continue' button (completed)" width="1366"/>
+                <img src="25fa4f2755422058bac3baa019687b6165803bc96b9620fe22fbd6497bce8238.png" title=" he provides personal details: CustomerDetails[firstName=null, lastName=Collector, postCode=ABC-123] (completed)" width="1366"/>
+                <img src="25fa4f2755422058bac3baa019687b6165803bc96b9620fe22fbd6497bce8238.png" title=" When he provides the following personal details:
+| First Name | Last Name | Zip/Post Code |
+|  | Collector | ABC-123 | (completed)" width="1366"/>
+                <img src="25fa4f2755422058bac3baa019687b6165803bc96b9620fe22fbd6497bce8238.png" title=" Then he should be presented with the error message Error: First Name is required" width="1366"/>
+                <img src="25fa4f2755422058bac3baa019687b6165803bc96b9620fe22fbd6497bce8238.png" title=" he should see text of the 'error-message-container' element that contains: &lt;[Error: First Name is required]&gt;" width="1366"/>
+                <img src="b5f607acb31fce0c9f2ed50e58cfb804811628b4e08ddeb993d68f622c20f928.png" title=" 1: Colin enters incomplete name and address info ({First Name=, Last Name=Collector, Zip/Post Code=ABC-123, Error Message=Error: First Name is required}) (completed)" width="1366"/>
+                <img src="b5f607acb31fce0c9f2ed50e58cfb804811628b4e08ddeb993d68f622c20f928.png" title=" 2: Colin enters incomplete name and address info ({First Name=Colin, Last Name=, Zip/Post Code=ABC-123, Error Message=Error: Last Name is required})" width="1366"/>
+                <img src="312d4a83f36c90641129f23ebf8afd0aac4c1c0bfc4cf021fcaaa271827764f0.png" title=" Given Colin has logged onto the application" width="1366"/>
+                <img src="312d4a83f36c90641129f23ebf8afd0aac4c1c0bfc4cf021fcaaa271827764f0.png" title=" Colin opens the browser at https://www.saucedemo.com" width="1366"/>
+                <img src="312d4a83f36c90641129f23ebf8afd0aac4c1c0bfc4cf021fcaaa271827764f0.png" title=" Given Colin has logged onto the application (completed)" width="1366"/>
+                <img src="312d4a83f36c90641129f23ebf8afd0aac4c1c0bfc4cf021fcaaa271827764f0.png" title=" Given Colin is browsing the product catalog" width="1366"/>
+                <img src="312d4a83f36c90641129f23ebf8afd0aac4c1c0bfc4cf021fcaaa271827764f0.png" title=" Colin opens the browser at https://www.saucedemo.com/inventory.html" width="1366"/>
+                <img src="1bd1268f1e1be5f3bf96bd82ecbea1d53f437139494bd2415be950dd44c0cc85.png" title=" Colin opens the browser at https://www.saucedemo.com/inventory.html (completed)" width="1366"/>
+                <img src="1bd1268f1e1be5f3bf96bd82ecbea1d53f437139494bd2415be950dd44c0cc85.png" title=" Given Colin is browsing the product catalog (completed)" width="1366"/>
+                <img src="1bd1268f1e1be5f3bf96bd82ecbea1d53f437139494bd2415be950dd44c0cc85.png" title=" And Colin has selected an item and checked out his cart" width="1366"/>
+                <img src="1bd1268f1e1be5f3bf96bd82ecbea1d53f437139494bd2415be950dd44c0cc85.png" title=" Colin clicks on 'the 'Add to cart' button for 'Sauce Labs Onesie'" width="1366"/>
+                <img src="3332eae66dda6c4bebd87897c19b841f762505f987933f6b528b3684ec11145b.png" title=" Colin clicks on 'the 'Add to cart' button for 'Sauce Labs Onesie' (completed)" width="1366"/>
+                <img src="3332eae66dda6c4bebd87897c19b841f762505f987933f6b528b3684ec11145b.png" title=" Colin initiates a checkout" width="1366"/>
+                <img src="3332eae66dda6c4bebd87897c19b841f762505f987933f6b528b3684ec11145b.png" title=" Colin clicks on the link" width="1366"/>
+                <img src="f663e6224d6c737546d1b0559e1e64b6a9dae0bdcf23d53692164bde6e23b466.png" title=" Colin clicks on the link (completed)" width="1366"/>
+                <img src="f663e6224d6c737546d1b0559e1e64b6a9dae0bdcf23d53692164bde6e23b466.png" title=" Colin clicks on 'Checkout' button" width="1366"/>
+                <img src="2ceb07e030b6283744d7db29c092479767c7fe20164bc72d4b239171d3053dcf.png" title=" Colin clicks on 'Checkout' button (completed)" width="1366"/>
+                <img src="2ceb07e030b6283744d7db29c092479767c7fe20164bc72d4b239171d3053dcf.png" title=" Colin initiates a checkout (completed)" width="1366"/>
+                <img src="2ceb07e030b6283744d7db29c092479767c7fe20164bc72d4b239171d3053dcf.png" title=" And Colin has selected an item and checked out his cart (completed)" width="1366"/>
+                <img src="2ceb07e030b6283744d7db29c092479767c7fe20164bc72d4b239171d3053dcf.png" title=" When he provides the following personal details:
+| First Name | Last Name | Zip/Post Code |
+| Colin |  | ABC-123 |" width="1366"/>
+                <img src="2ceb07e030b6283744d7db29c092479767c7fe20164bc72d4b239171d3053dcf.png" title=" he provides personal details: CustomerDetails[firstName=Colin, lastName=null, postCode=ABC-123]" width="1366"/>
+                <img src="2ceb07e030b6283744d7db29c092479767c7fe20164bc72d4b239171d3053dcf.png" title=" he enters 'Colin' into 'First Name' field" width="1366"/>
+                <img src="ae3c01b8f3ccc5512f1dd767ad0eefba744ee78c868d85e5391f5f2d4ca21365.png" title=" he enters 'Colin' into 'First Name' field (completed)" width="1366"/>
+                <img src="ae3c01b8f3ccc5512f1dd767ad0eefba744ee78c868d85e5391f5f2d4ca21365.png" title=" he enters '' into 'Last Name' field" width="1366"/>
+                <img src="9a9a19881aa1968762c45f33c5842e348a3d4a81c9acd1592071b48d71b683d9.png" title=" he enters '' into 'Last Name' field (completed)" width="1366"/>
+                <img src="9a9a19881aa1968762c45f33c5842e348a3d4a81c9acd1592071b48d71b683d9.png" title=" he enters 'ABC-123' into 'Zip/Postal Code' field" width="1366"/>
+                <img src="aa4fcfea7d7182501c334911a1829062b3a1d330d991c653b313081ba7008e2f.png" title=" he enters 'ABC-123' into 'Zip/Postal Code' field (completed)" width="1366"/>
+                <img src="aa4fcfea7d7182501c334911a1829062b3a1d330d991c653b313081ba7008e2f.png" title=" he clicks on 'Continue' button" width="1366"/>
+                <img src="27f6621a3517baefc0fde4bcfcefc38901a8941f8bdc463aa5cfd79772aa716a.png" title=" he clicks on 'Continue' button (completed)" width="1366"/>
+                <img src="27f6621a3517baefc0fde4bcfcefc38901a8941f8bdc463aa5cfd79772aa716a.png" title=" he provides personal details: CustomerDetails[firstName=Colin, lastName=null, postCode=ABC-123] (completed)" width="1366"/>
+                <img src="27f6621a3517baefc0fde4bcfcefc38901a8941f8bdc463aa5cfd79772aa716a.png" title=" When he provides the following personal details:
+| First Name | Last Name | Zip/Post Code |
+| Colin |  | ABC-123 | (completed)" width="1366"/>
+                <img src="27f6621a3517baefc0fde4bcfcefc38901a8941f8bdc463aa5cfd79772aa716a.png" title=" Then he should be presented with the error message Error: Last Name is required" width="1366"/>
+                <img src="27f6621a3517baefc0fde4bcfcefc38901a8941f8bdc463aa5cfd79772aa716a.png" title=" he should see text of the 'error-message-container' element that contains: &lt;[Error: Last Name is required]&gt;" width="1366"/>
+                <img src="b5f607acb31fce0c9f2ed50e58cfb804811628b4e08ddeb993d68f622c20f928.png" title=" 3: Colin enters incomplete name and address info ({First Name=Colin, Last Name=Collector, Zip/Post Code=, Error Message=Error: Postal Code is required})" width="1366"/>
+                <img src="312d4a83f36c90641129f23ebf8afd0aac4c1c0bfc4cf021fcaaa271827764f0.png" title=" Given Colin has logged onto the application" width="1366"/>
+                <img src="312d4a83f36c90641129f23ebf8afd0aac4c1c0bfc4cf021fcaaa271827764f0.png" title=" Colin opens the browser at https://www.saucedemo.com" width="1366"/>
+                <img src="312d4a83f36c90641129f23ebf8afd0aac4c1c0bfc4cf021fcaaa271827764f0.png" title=" Given Colin has logged onto the application (completed)" width="1366"/>
+                <img src="312d4a83f36c90641129f23ebf8afd0aac4c1c0bfc4cf021fcaaa271827764f0.png" title=" Given Colin is browsing the product catalog" width="1366"/>
+                <img src="312d4a83f36c90641129f23ebf8afd0aac4c1c0bfc4cf021fcaaa271827764f0.png" title=" Colin opens the browser at https://www.saucedemo.com/inventory.html" width="1366"/>
+                <img src="1bd1268f1e1be5f3bf96bd82ecbea1d53f437139494bd2415be950dd44c0cc85.png" title=" Colin opens the browser at https://www.saucedemo.com/inventory.html (completed)" width="1366"/>
+                <img src="1bd1268f1e1be5f3bf96bd82ecbea1d53f437139494bd2415be950dd44c0cc85.png" title=" Given Colin is browsing the product catalog (completed)" width="1366"/>
+                <img src="1bd1268f1e1be5f3bf96bd82ecbea1d53f437139494bd2415be950dd44c0cc85.png" title=" And Colin has selected an item and checked out his cart" width="1366"/>
+                <img src="1bd1268f1e1be5f3bf96bd82ecbea1d53f437139494bd2415be950dd44c0cc85.png" title=" Colin clicks on 'the 'Add to cart' button for 'Sauce Labs Onesie'" width="1366"/>
+                <img src="3332eae66dda6c4bebd87897c19b841f762505f987933f6b528b3684ec11145b.png" title=" Colin clicks on 'the 'Add to cart' button for 'Sauce Labs Onesie' (completed)" width="1366"/>
+                <img src="3332eae66dda6c4bebd87897c19b841f762505f987933f6b528b3684ec11145b.png" title=" Colin initiates a checkout" width="1366"/>
+                <img src="3332eae66dda6c4bebd87897c19b841f762505f987933f6b528b3684ec11145b.png" title=" Colin clicks on the link" width="1366"/>
+                <img src="f663e6224d6c737546d1b0559e1e64b6a9dae0bdcf23d53692164bde6e23b466.png" title=" Colin clicks on the link (completed)" width="1366"/>
+                <img src="f663e6224d6c737546d1b0559e1e64b6a9dae0bdcf23d53692164bde6e23b466.png" title=" Colin clicks on 'Checkout' button" width="1366"/>
+                <img src="2ceb07e030b6283744d7db29c092479767c7fe20164bc72d4b239171d3053dcf.png" title=" Colin clicks on 'Checkout' button (completed)" width="1366"/>
+                <img src="2ceb07e030b6283744d7db29c092479767c7fe20164bc72d4b239171d3053dcf.png" title=" Colin initiates a checkout (completed)" width="1366"/>
+                <img src="2ceb07e030b6283744d7db29c092479767c7fe20164bc72d4b239171d3053dcf.png" title=" And Colin has selected an item and checked out his cart (completed)" width="1366"/>
+                <img src="2ceb07e030b6283744d7db29c092479767c7fe20164bc72d4b239171d3053dcf.png" title=" When he provides the following personal details:
+| First Name | Last Name | Zip/Post Code |
+| Colin | Collector |  |" width="1366"/>
+                <img src="2ceb07e030b6283744d7db29c092479767c7fe20164bc72d4b239171d3053dcf.png" title=" he provides personal details: CustomerDetails[firstName=Colin, lastName=Collector, postCode=null]" width="1366"/>
+                <img src="2ceb07e030b6283744d7db29c092479767c7fe20164bc72d4b239171d3053dcf.png" title=" he enters 'Colin' into 'First Name' field" width="1366"/>
+                <img src="ae3c01b8f3ccc5512f1dd767ad0eefba744ee78c868d85e5391f5f2d4ca21365.png" title=" he enters 'Colin' into 'First Name' field (completed)" width="1366"/>
+                <img src="ae3c01b8f3ccc5512f1dd767ad0eefba744ee78c868d85e5391f5f2d4ca21365.png" title=" he enters 'Collector' into 'Last Name' field" width="1366"/>
+                <img src="c33a4dfe30c5408fc36107cbd313cfeb8f0247501824601ac6280e792733ffe8.png" title=" he enters 'Collector' into 'Last Name' field (completed)" width="1366"/>
+                <img src="c33a4dfe30c5408fc36107cbd313cfeb8f0247501824601ac6280e792733ffe8.png" title=" he enters '' into 'Zip/Postal Code' field" width="1366"/>
+                <img src="d911189268ee6fade0210fc2bed7059cf4a9d52e6a9a467fa9156423a8875169.png" title=" he enters '' into 'Zip/Postal Code' field (completed)" width="1366"/>
+                <img src="d911189268ee6fade0210fc2bed7059cf4a9d52e6a9a467fa9156423a8875169.png" title=" he clicks on 'Continue' button" width="1366"/>
+                <img src="125fee83a5d255e4e02828f8a8b44d0f8b1a1518efb2a3c5bd6dd0026313e748.png" title=" he clicks on 'Continue' button (completed)" width="1366"/>
+                <img src="125fee83a5d255e4e02828f8a8b44d0f8b1a1518efb2a3c5bd6dd0026313e748.png" title=" he provides personal details: CustomerDetails[firstName=Colin, lastName=Collector, postCode=null] (completed)" width="1366"/>
+                <img src="125fee83a5d255e4e02828f8a8b44d0f8b1a1518efb2a3c5bd6dd0026313e748.png" title=" When he provides the following personal details:
+| First Name | Last Name | Zip/Post Code |
+| Colin | Collector |  | (completed)" width="1366"/>
+                <img src="125fee83a5d255e4e02828f8a8b44d0f8b1a1518efb2a3c5bd6dd0026313e748.png" title=" Then he should be presented with the error message Error: Postal Code is required" width="1366"/>
+                <img src="125fee83a5d255e4e02828f8a8b44d0f8b1a1518efb2a3c5bd6dd0026313e748.png" title=" he should see text of the 'error-message-container' element that contains: &lt;[Error: Postal Code is required]&gt;: <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.3.2</span>
+</div>
+</body>
+</html>

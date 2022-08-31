@@ -1,0 +1,7 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Calculator","Should report divide by zero errors","SUCCESS","2022-08-31T12:08:43.537650352Z[Etc/UTC]","0.0","3.47"
+"Managing the cart","Colin views the details of a product and adds it to his cart 2","SUCCESS","2022-08-31T12:08:41.734427549Z[Etc/UTC]","0.0","3.71"
+"Managing the cart","Colin sees every item he has added in the cart","SUCCESS","2022-08-31T12:08:45.56543299Z[Etc/UTC]","0.0","2.61"
+"Filtering products","Sort products","SUCCESS","2022-08-31T12:08:41.243391525Z[Etc/UTC]","0.0","14.76"
+"Login's all good","Login's with invalid credentials for <username>","SUCCESS","2022-08-31T12:08:05.585915628Z[Etc/UTC]","0.0","16.87"
+"Completing a purchase","Colin confirms his order and is told that the items have been dispatched","SUCCESS","2022-08-31T12:08:35.738875036Z[Etc/UTC]","0.0","3.3"

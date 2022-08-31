@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Calculator","Rounding down","SUCCESS","2022-08-31T12:07:40.988423917Z[Etc/UTC]","0.0","62.53"
+"Managing the cart","Colin adds items to the cart","SUCCESS","2022-08-31T12:07:40.96946336Z[Etc/UTC]","0.0","43.03"
+"Browse the catalog","Colin views information about each product","SUCCESS","2022-08-31T12:08:00.805955821Z[Etc/UTC]","0.0","13.95"
+"Browse the catalog","Colin views the details for specific products","SUCCESS","2022-08-31T12:08:14.765937474Z[Etc/UTC]","0.0","26.09"
+"Completing a purchase","Colin enters incomplete name and address info","SUCCESS","2022-08-31T12:07:40.969380059Z[Etc/UTC]","0.0","50.26"

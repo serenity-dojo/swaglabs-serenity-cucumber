@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Managing the cart","Colin views the details of a product and adds it to his cart 2","SUCCESS","2022-08-31T12:08:41.734427549Z[Etc/UTC]","0.0","3.71"
+"Managing the cart","Colin sees every item he has added in the cart","SUCCESS","2022-08-31T12:08:45.56543299Z[Etc/UTC]","0.0","2.61"

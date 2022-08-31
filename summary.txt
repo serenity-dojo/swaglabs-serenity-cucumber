@@ -1,7 +1,7 @@
-Serenity report generated 25-02-2022 14:49:04
+Serenity report generated 31-08-2022 12:09:05
 
-Test Cases:         17  (including 19 rows of test data)
-Passed:             17
+Test Cases:         19  (including 22 rows of test data)
+Passed:             19
 Failed:             0
 Failed with errors: 0
 Compromised:        0

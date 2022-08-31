@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Login's all good","Colin logs in with Colin's valid credentials","SUCCESS","2022-08-31T12:07:40.969306857Z[Etc/UTC]","0.0","24.57"
+"Login's all good","Login's with invalid credentials for <username>","SUCCESS","2022-08-31T12:08:05.585915628Z[Etc/UTC]","0.0","16.87"

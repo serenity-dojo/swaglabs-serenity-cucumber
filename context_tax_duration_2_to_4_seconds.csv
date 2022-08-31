@@ -1,3 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Completing a purchase","Colin enters incomplete name and address info","SUCCESS","2022-02-25T14:47:45.250379638Z[Etc/UTC]","0.0","13.03"
-"Completing a purchase","Colin purchases two items and sees them both appear in the purchase summary","SUCCESS","2022-02-25T14:47:58.293685128Z[Etc/UTC]","0.0","2.1"

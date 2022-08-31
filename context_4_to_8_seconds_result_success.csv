@@ -1,4 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Managing the cart","Colin adds items to the cart","SUCCESS","2022-02-25T14:48:08.671789403Z[Etc/UTC]","0.0","8.78"
-"Browse the catalog","Colin views information about each product","SUCCESS","2022-02-25T14:48:34.965544329Z[Etc/UTC]","0.0","4.65"
-"Completing a purchase","Colin enters incomplete name and address info","SUCCESS","2022-02-25T14:47:45.250379638Z[Etc/UTC]","0.0","13.03"
