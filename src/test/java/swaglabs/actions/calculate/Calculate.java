@@ -9,10 +9,13 @@ import net.serenitybdd.screenplay.ui.Button;
 
 public class Calculate {
 
+    public static final String NUMBER_1_FIELD = "#number1Field";
+    public static final String NUMBER_2_FIELD = "#number2Field";
+
     public static Performable theAnswerTo(String firstNumber, String secondNumber, String operation) {
         return Task.where("{0} calculates " + firstNumber + " " + operation + " " + secondNumber,
-                Enter.theValue(firstNumber).into("#number1Field"),
-                Enter.theValue(secondNumber).into("#number2Field"),
+                Enter.theValue(firstNumber).into(NUMBER_1_FIELD),
+                Enter.theValue(secondNumber).into(NUMBER_2_FIELD),
                 SelectFromOptions.byVisibleText(operation).from("#selectOperationDropdown"),
                 Click.on(Button.withText("Calculate"))
         );
