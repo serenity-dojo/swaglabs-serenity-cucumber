@@ -8,6 +8,6 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"pretty"},
         tags = "@current",
-        features = "src/test/resources/features/calculator"
+        features = "classpath:main_features/calculator"
 )
 public class CalculatorTestSuite {}

@@ -82,7 +82,7 @@ public class LoginStepDefinitions {
     @Then("{actor} should be presented the product catalog")
     public void shouldBeOnHomePage(Actor actor) {
         actor.attemptsTo(
-                Ensure.that(Text.of(".title")).isEqualTo("PRODUCTS")
+                Ensure.that(Text.of(".title")).isEqualTo("Products")
         );
         //softly.assertThat(true).isFalse();
     }
