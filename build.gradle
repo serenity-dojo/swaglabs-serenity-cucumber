@@ -12,7 +12,7 @@ buildscript {
     }
   }
   dependencies {
-    classpath "net.serenity-bdd:serenity-gradle-plugin:3.3.2"
+    classpath "net.serenity-bdd:serenity-gradle-plugin:3.7.0"
   }
 }
 
@@ -27,7 +27,7 @@ targetCompatibility = 16
 
 ext {
     slf4jVersion = '1.7.7'
-    serenityCoreVersion = '3.3.2'
+    serenityCoreVersion = '3.9.0-SNAPSHOT'
     junitVersion = '4.13.1'
     assertJVersion = '3.23.1'
     logbackVersion = '1.2.10'

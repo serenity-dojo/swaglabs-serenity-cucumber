@@ -25,7 +25,6 @@ Feature: Calculator
         | -1           | -1            | Concatenate | -1-1    |
         | 3.5          | 2.25          | Concatenate | 3.52.25 |
 
-    @current
     Scenario Outline: Rounding down
       Given Carrie has opened the calculator
       When she activates "Integers Only"
@@ -38,7 +37,6 @@ Feature: Calculator
         | 5.5          | 2             | Subtract  | 3      |
 
 
-    @current
     Scenario: Should report divide by zero errors
       Given Carrie has opened the calculator
       And she tries to perform a "Divide" operation on "1" and "0"
