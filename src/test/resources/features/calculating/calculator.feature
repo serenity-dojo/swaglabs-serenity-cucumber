@@ -1,3 +1,4 @@
+@calculator
 Feature: Calculator
 
   Rule: Should be able to perform the four basic arithmetic operations
