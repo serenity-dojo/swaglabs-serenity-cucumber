@@ -8,6 +8,7 @@ Feature: Calculator
       When she performs a "<Operation>" operation on "<First Number>" and "<Second Number>"
       Then the result should be "<Result>"
 
+      @addition
       Examples: Adding numbers
         | First Number | Second Number | Operation | Result |
         | 1            | 2             | Add       | 3      |
@@ -37,7 +38,7 @@ Feature: Calculator
         | 1            | 2.5           | Add       | 3      |
         | 5.5          | 2             | Subtract  | 3      |
 
-
+    @divide-by-zero
     Scenario: Should report divide by zero errors
       Given Carrie has opened the calculator
       And she tries to perform a "Divide" operation on "1" and "0"
