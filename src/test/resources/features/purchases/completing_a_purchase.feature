@@ -6,6 +6,7 @@ Feature: Completing a purchase
 
   Rule: Customers must provide their name and address during checkout
 
+    @current
     Scenario Outline: Colin enters incomplete name and address info
       Given Colin is browsing the product catalog
       And Colin has selected an item and checked out his cart
@@ -14,10 +15,10 @@ Feature: Completing a purchase
         | <First Name> | <Last Name> | <Zip/Post Code> |
       Then he should be presented with the error message <Error Message>
       Examples: Some examples
-        | First Name | Last Name | Zip/Post Code | Error Message                  |
-        |            | Collector | ABC-123       | Error: First Name is required  |
-        | Colin      |           | ABC-123       | Error: Last Name is required   |
-        | Colin      | Collector |               | Error: Postal Code is required |
+        | First Name | Last Name | Zip/Post Code | Error Message                   |
+        |            | Collector | ABC-123       | Error: First Name is required   |
+        | Colin      |           | ABC-123       | Error: Last Name is required!!! |
+        | Colin      | Collector |               | Error: Postal Code is required  |
 
 
   Rule: Customers should see a summary of their order before they complete their purchase
@@ -28,8 +29,8 @@ Feature: Completing a purchase
       When he checks out his cart providing his personal details
       Then he should be presented with a summary of his purchase including:
         | Qty | Description             | Price  |
-        | 1   | Sauce Labs Backpack     | $29.99 |
-        | 1   | Sauce Labs Bolt T-Shirt | $15.99 |
+        | 1   | Sauce Labs Backpack     | $0.00 |
+        | 1   | Sauce Labs Bolt T-Shirt | $0.00 |
       And the total price should be:
         | Item total | Tax   | Total  |
         | $45.98     | $3.68 | $49.66 |

@@ -12,7 +12,7 @@ Feature: Calculator
       Examples: Adding numbers
         | First Number | Second Number | Operation | Result |
         | 1            | 2             | Add       | 3      |
-        | -1           | 2             | Add       | 1      |
+        | -1           | 2             | Add       | 1000   |
         | 1.5          | 2             | Add       | 3.5    |
 
       Examples: Subtracting numbers
@@ -27,6 +27,7 @@ Feature: Calculator
         | -1           | -1            | Concatenate | -1-1    |
         | 3.5          | 2.25          | Concatenate | 3.52.25 |
 
+    @rounding
     Scenario Outline: Rounding down
       Given Carrie has opened the calculator
       When she activates "Integers Only"
