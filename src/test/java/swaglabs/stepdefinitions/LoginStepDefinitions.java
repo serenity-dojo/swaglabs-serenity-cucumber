@@ -5,34 +5,22 @@ import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.serenitybdd.core.environment.EnvironmentSpecificConfiguration;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
-import net.serenitybdd.screenplay.actions.InTheBrowser;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.questions.Text;
-import net.serenitybdd.screenplay.ui.PageElement;
-import net.thucydides.core.annotations.WithDriver;
-import net.thucydides.core.reports.html.HtmlAggregateStoryReporter;
-import net.thucydides.core.steps.StepEventBus;
-import net.thucydides.core.util.EnvironmentVariables;
+import net.thucydides.model.util.EnvironmentVariables;
 import org.assertj.core.api.Assertions;
 import org.assertj.core.api.SoftAssertions;
-import org.openqa.selenium.Cookie;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import swaglabs.actions.authentication.ApplicationPage;
 import swaglabs.actions.authentication.Login;
 import swaglabs.actions.errors.ErrorMessages;
-import swaglabs.actions.state.Reset;
-import swaglabs.actions.ui.PageHeader;
 import swaglabs.model.Customer;
 import swaglabs.model.UserCredentials;
 
 import java.util.Map;
-
-import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class LoginStepDefinitions {
 
