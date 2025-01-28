@@ -5,7 +5,7 @@ Feature: Managing the cart
   Background:
     Given Colin has logged onto the application
 
-  Rule: Customer can add or remove items from the catalog
+  Rule: Customer can add or remove items directly from the catalog
 
     Scenario Outline: Colin adds items to the cart
       Given Colin is browsing the product catalog

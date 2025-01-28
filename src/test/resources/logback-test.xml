@@ -7,7 +7,7 @@
         </encoder>
     </appender>
     <logger name="swaglabs" level="INFO"/>
-    <root level="WARN">
+    <root level="ERROR">
         <appender-ref ref="STDOUT"/>
     </root>
 </configuration>
