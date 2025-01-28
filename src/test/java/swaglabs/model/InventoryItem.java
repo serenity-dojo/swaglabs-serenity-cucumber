@@ -5,12 +5,12 @@ import java.util.Optional;
 import static java.util.Arrays.stream;
 
 public enum InventoryItem {
-    BikeLight("Sauce Labs Bike Light",0),
-    TShirt("Sauce Labs Bolt T-Shirt",1),
-    Onesie("Sauce Labs Onesie",2),
-    TestAllTheThings("Test.allTheThings() T-Shirt (Red)",3),
-    Backpack("Sauce Labs Backpack",4),
-    Jacket("Sauce Labs Fleece Jacket",5),
+    BikeLight("Sauce Labs Bike Light", 0),
+    TShirt("Sauce Labs Bolt T-Shirt", 1),
+    Onesie("Sauce Labs Onesie", 2),
+    TestAllTheThings("Test.allTheThings() T-Shirt (Red)", 3),
+    Backpack("Sauce Labs Backpack", 4),
+    Jacket("Sauce Labs Fleece Jacket", 5),
     ;
 
     public final String name;

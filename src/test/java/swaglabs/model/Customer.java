@@ -1,8 +1,8 @@
 package swaglabs.model;
 
 public enum Customer {
-    Colin("standard_user","secret_sauce"),
-    Lorenzo("locked_out_user","secret_sauce");
+    Colin("standard_user", "secret_sauce"),
+    Lorenzo("locked_out_user", "secret_sauce");
 
     final String username;
     final String password;

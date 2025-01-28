@@ -20,8 +20,8 @@ Feature: Calculating sales tax
   Rule: Sales tax is calculated on the total of all purchased items
     Scenario: Colin purchases two items so the total tax calculated includes tax for both items
       Given Colin has the following items in his cart:
-        |Sauce Labs Backpack   |
-        |Sauce Labs Bike Light |
+        | Sauce Labs Backpack   |
+        | Sauce Labs Bike Light |
       When he reviews his order
       Then the total price should be:
         | Item total | Tax   | Total  |

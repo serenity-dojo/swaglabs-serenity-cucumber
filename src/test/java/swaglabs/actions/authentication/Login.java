@@ -24,7 +24,7 @@ public class Login {
         return InTheBrowser.perform(
                 browser -> {
                     Customer customer = Customer.withName(customerName);
-                    Cookie authenticationCookie = new Cookie("session-username",customer.getUsername());
+                    Cookie authenticationCookie = new Cookie("session-username", customer.getUsername());
                     browser.getDriver().manage().addCookie(authenticationCookie);
                     browser.getDriver().navigate().refresh();
                 }

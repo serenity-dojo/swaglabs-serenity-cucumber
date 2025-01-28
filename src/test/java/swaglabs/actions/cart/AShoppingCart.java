@@ -40,7 +40,7 @@ public class AShoppingCart implements Fact {
     @Override
     public void setup(Actor actor) {
         BrowseTheWeb.as(actor)
-                    .evaluateJavascript("window.localStorage.setItem('cart-contents','[" + commaSeparatedItemIds() + "]')");
+                .evaluateJavascript("window.localStorage.setItem('cart-contents','[" + commaSeparatedItemIds() + "]')");
     }
 
     @Override

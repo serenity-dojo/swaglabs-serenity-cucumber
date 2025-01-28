@@ -1,63 +1,80 @@
-defaultTasks 'clean', 'test', 'aggregate'
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "net.serenity-bdd:serenity-single-page-report:4.1.14"
+    }
+}
+
+plugins {
+    id 'java'
+    id 'net.serenity-bdd.serenity-gradle-plugin' version '4.1.14'
+}
+
+group = 'net.serenitybdd.swaglabs'
+version = '1.0.0-SNAPSHOT'
+sourceCompatibility = '16'
+targetCompatibility = '16'
 
 repositories {
     mavenCentral()
-    mavenLocal()
 }
-
-buildscript {
-  repositories {
-    maven {
-      url "https://plugins.gradle.org/m2/"
-    }
-  }
-  dependencies {
-    classpath "net.serenity-bdd:serenity-gradle-plugin:3.3.0"
-  }
-}
-
-
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'idea'
-apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
-
-sourceCompatibility = 16
-targetCompatibility = 16
 
 ext {
-    slf4jVersion = '1.7.7'
-    serenityCoreVersion = '3.3.0'
-    junitVersion = '4.13.1'
-    assertJVersion = '3.23.1'
-    logbackVersion = '1.2.10'
+    serenityVersion = '4.1.14'
+    junitVersion = '5.11.4'
+    junitPlatformVersion = '1.11.4'
+    cucumberVersion = '7.20.1'
+}
+
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
 }
 
 dependencies {
-    implementation "ch.qos.logback:logback-classic:${logbackVersion}"
+    testImplementation "net.serenity-bdd:serenity-core:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-cucumber:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-screenplay:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-ensure:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-saucelabs:${serenityVersion}"
 
-    testImplementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
-            "net.serenity-bdd:serenity-cucumber:${serenityCoreVersion}",
-            "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
-            "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}",
-            "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}",
-            "junit:junit:${junitVersion}",
-            "org.assertj:assertj-core:${assertJVersion}"
+    testImplementation "org.junit.platform:junit-platform-launcher:${junitPlatformVersion}"
+    testImplementation "org.junit.platform:junit-platform-suite:${junitPlatformVersion}"
+    testImplementation "org.junit.platform:junit-platform-suite-api:${junitPlatformVersion}"
+    testImplementation "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+    testImplementation "org.junit.vintage:junit-vintage-engine:${junitVersion}"
+
+    testImplementation "io.cucumber:cucumber-junit-platform-engine:${cucumberVersion}"
+
+    implementation 'ch.qos.logback:logback-classic:1.2.10'
+    testImplementation 'org.assertj:assertj-core:3.22.0'
 }
 
 test {
-    systemProperties System.getProperties()
-    maxParallelForks = 8
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+    systemProperties System.properties
 }
 
-serenity {
-    // Specify the root package of any JUnit acceptance tests
-    testRoot="swaglabs"
-
-    // Specify the root directory of any Cucumber feature files
-    requirementsDir = "src/test/resources/features"
+tasks.withType(Test) {
+    systemProperty "cucumber.filter.tags", System.getProperty("tags", "")
+    systemProperty "webdriver.base.url", System.getProperty("webdriver.base.url", "")
+    systemProperty "browserstack.user", System.getProperty("browserstack.user", "")
+    systemProperty "browserstack.key", System.getProperty("browserstack.key", "")
 }
 
 gradle.startParameter.continueOnFailure = true
 
-test.finalizedBy(aggregate)
+serenity {
+    reports = ["single-page-html"]
+    testRoot = "net.serenitybdd.swaglabs"
+    requirementsDir = "src/test/resources/features"
+}
+
+test.finalizedBy(aggregate,reports)

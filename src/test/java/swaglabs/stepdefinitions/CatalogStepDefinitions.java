@@ -5,13 +5,18 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.DoubleClick;
+import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.questions.Text;
-import net.serenitybdd.screenplay.ui.Link;
+import net.serenitybdd.screenplay.targets.Target;
 import net.serenitybdd.screenplay.ui.PageElement;
 import net.serenitybdd.screenplay.ui.Select;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import net.serenitybdd.screenplay.waits.Wait;
+import net.thucydides.core.webdriver.shadow.ByShadow;
+import org.assertj.core.api.Assertions;
 import swaglabs.actions.authentication.Login;
 import swaglabs.actions.catalog.CatalogPage;
 import swaglabs.actions.catalog.ProductDetailsPage;
@@ -32,7 +37,7 @@ public class CatalogStepDefinitions {
     public void logged_on_to_the_application(Actor actor) {
         actor.attemptsTo(
                 Navigate.toTheLoginPage(),
-                Login.withCredentials("standard_user","secret_sauce")
+                Login.withCredentials("standard_user", "secret_sauce")
         );
     }
 
@@ -57,6 +62,40 @@ public class CatalogStepDefinitions {
     @When("{actor} is browsing the product catalog")
     public void browsingTheProductCatalog(Actor actor) {
         actor.attemptsTo(Navigate.toTheCatalogPage());
+    }
+
+    @When("{actor} opens the browser extension")
+    public void openBrowserExtensionOptions(Actor actor) throws InterruptedException {
+        actor.attemptsTo(
+                Open.url("chrome-extension://mgijmajocgfcbeboacabfgobmjgjcoja/browser_action.html"),
+                Enter.theValue("define").into("#query-field"),
+                Click.on("#define-btn")
+        );
+        Thread.sleep(1000);
+    }
+
+    @When("{actor} displays the definition of a term")
+    public void displaysTheDefinitionOfATerm(Actor actor) throws InterruptedException {
+        actor.attemptsTo(
+                DoubleClick.on(".login_logo")
+        );
+        Thread.sleep(1000);
+    }
+
+
+    @Then("the head word should be displayed")
+    public void the_head_word_should_be_displayed() {
+        OnStage.theActorInTheSpotlight().attemptsTo(
+                Ensure.that(Target.the("headword").locatedBy(".headword")).isDisplayed()
+        );
+    }
+
+    @Then("the dictionary definition should be displayed")
+    public void the_definition_should_be_displayed() {
+        String dictionaryDefinition
+                = OnStage.theActorInTheSpotlight().asksFor(Text.of(ByShadow.cssSelector("#gdx-bubble-host")));
+
+        Assertions.assertThat(dictionaryDefinition).contains("A laboratory");
     }
 
     //

@@ -5,4 +5,5 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record UserCredentials(@JsonProperty("username") String username,
-                             @JsonProperty("password") String password) {}
+                              @JsonProperty("password") String password) {
+}

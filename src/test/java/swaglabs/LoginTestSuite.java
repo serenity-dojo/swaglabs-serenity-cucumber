@@ -9,4 +9,5 @@ import org.junit.runner.RunWith;
         plugin = {"pretty"},
         features = "classpath:features/authentication"
 )
-public class LoginTestSuite {}
+public class LoginTestSuite {
+}

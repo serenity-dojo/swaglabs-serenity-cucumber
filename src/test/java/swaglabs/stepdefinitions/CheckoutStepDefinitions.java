@@ -4,17 +4,13 @@ import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import net.serenitybdd.core.Serenity;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.ensure.SoftlyEnsure;
-import net.serenitybdd.screenplay.questions.targets.TheTarget;
 import net.serenitybdd.screenplay.targets.Target;
-import net.serenitybdd.screenplay.ui.PageElement;
-import org.fluentlenium.core.annotation.Page;
-import org.hamcrest.Matchers;
 import org.jetbrains.annotations.NotNull;
-import swaglabs.actions.cart.AShoppingCart;
 import swaglabs.actions.cart.AddToCart;
 import swaglabs.actions.checkout.*;
 import swaglabs.actions.navigation.Navigate;
@@ -27,7 +23,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class CheckoutStepDefinitions {
@@ -121,6 +116,7 @@ public class CheckoutStepDefinitions {
     }
 
     private static Target TOTAL_FIELD = Target.the("Total").locatedBy(".summary_total_label");
+
     /**
      * Check the total price details displayed on the checkout confirmation page
      */
@@ -134,6 +130,7 @@ public class CheckoutStepDefinitions {
                 Ensure.that(CheckoutPage.TOTAL).isEqualTo(expectedPrices.total()),
                 SoftlyEnsure.finish()
         );
+        Serenity.recordReportData().withTitle("Expected total prices").andContents("EXPECTED:" + expectedPrices);
 
     }
 }

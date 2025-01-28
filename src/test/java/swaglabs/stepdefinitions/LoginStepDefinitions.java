@@ -1,36 +1,23 @@
 package swaglabs.stepdefinitions;
 
-import io.cucumber.java.After;
 import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.serenitybdd.core.environment.EnvironmentSpecificConfiguration;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
-import net.serenitybdd.screenplay.actions.InTheBrowser;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.questions.Text;
-import net.serenitybdd.screenplay.ui.PageElement;
-import net.thucydides.core.annotations.WithDriver;
-import net.thucydides.core.reports.html.HtmlAggregateStoryReporter;
-import net.thucydides.core.steps.StepEventBus;
-import net.thucydides.core.util.EnvironmentVariables;
-import org.openqa.selenium.Cookie;
+import net.thucydides.model.util.EnvironmentVariables;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import swaglabs.actions.authentication.ApplicationPage;
 import swaglabs.actions.authentication.Login;
 import swaglabs.actions.errors.ErrorMessages;
-import swaglabs.actions.state.Reset;
-import swaglabs.actions.ui.PageHeader;
 import swaglabs.model.Customer;
 import swaglabs.model.UserCredentials;
 
 import java.util.Map;
-
-import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class LoginStepDefinitions {
 
@@ -40,6 +27,7 @@ public class LoginStepDefinitions {
     }
 
     EnvironmentVariables environmentVariables;
+
     @Given("{actor} is on the login page")
     public void onTheLoginPage(Actor actor) {
         actor.attemptsTo(Open.url("https://www.saucedemo.com/"));
@@ -71,7 +59,7 @@ public class LoginStepDefinitions {
     @Then("{actor} should be presented the product catalog")
     public void shouldBeOnHomePage(Actor actor) {
         actor.attemptsTo(
-                Ensure.that(Text.of(".title")).isEqualTo("PRODUCTS")
+                Ensure.that(Text.of(".title")).isEqualTo("Products")
         );
     }
 

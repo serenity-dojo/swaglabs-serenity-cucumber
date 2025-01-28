@@ -6,4 +6,5 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record CheckoutItem(@JsonProperty("quantity") int quantity,
                            @JsonProperty("description") String description,
-                           @JsonProperty("price") String price) {}
+                           @JsonProperty("price") String price) {
+}
