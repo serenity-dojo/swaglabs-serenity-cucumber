@@ -68,7 +68,7 @@ public class CatalogStepDefinitions {
     public void openBrowserExtensionOptions(Actor actor) throws InterruptedException {
         actor.attemptsTo(
                 Open.url("chrome-extension://mgijmajocgfcbeboacabfgobmjgjcoja/browser_action.html"),
-                Enter.theValue("define").into("#query-field"),
+                Enter.theValue("cat").into("#query-field"),
                 Click.on("#define-btn")
         );
         Thread.sleep(1000);
@@ -85,9 +85,12 @@ public class CatalogStepDefinitions {
 
     @Then("the head word should be displayed")
     public void the_head_word_should_be_displayed() {
-        OnStage.theActorInTheSpotlight().attemptsTo(
+        Actor actor = OnStage.theActorInTheSpotlight();
+        actor.attemptsTo(
                 Ensure.that(Target.the("headword").locatedBy(".headword")).isDisplayed()
         );
+        String headwordValue = Text.of(Target.the("headword").locatedBy(".headword")).answeredBy(actor);
+        Assertions.assertThat(headwordValue).isEqualTo("cat");
     }
 
     @Then("the dictionary definition should be displayed")

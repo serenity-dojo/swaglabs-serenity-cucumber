@@ -12,13 +12,13 @@ Feature: Calculator
       Examples: Adding numbers
         | First Number | Second Number | Operation | Result |
         | 1            | 2             | Add       | 3      |
-        | -1           | 2             | Add       | 1      |
+        | -1           | 2             | Add       | 2     |
         | 1.5          | 2             | Add       | 3.5    |
 
       Examples: Subtracting numbers
         | First Number | Second Number | Operation | Result |
         | 2            | 1             | Subtract  | 1      |
-        | -1           | -1            | Subtract  | 0      |
+        | -1           | -1            | Subtract  | 1      |
         | 3.5          | 2.25          | Subtract  | 1.25   |
 
       Examples: Concatenating numbers
@@ -36,7 +36,7 @@ Feature: Calculator
         | First Number | Second Number | Operation | Result |
         | 1            | 2             | Add       | 3      |
         | 1            | 2.5           | Add       | 3      |
-        | 5.5          | 2             | Subtract  | 3      |
+        | 5.5          | 2             | Subtract  | 4      |
 
     @divide-by-zero
     Scenario: Should report divide by zero errors

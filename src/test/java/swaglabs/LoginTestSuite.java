@@ -7,7 +7,8 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         plugin = {"pretty"},
-        features = "classpath:features/authentication"
+        features = "classpath:features/authentication",
+        glue = {"swaglabs"}
 )
 public class LoginTestSuite {
 }
