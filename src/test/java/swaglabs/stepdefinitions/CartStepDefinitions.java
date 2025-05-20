@@ -42,6 +42,9 @@ public class CartStepDefinitions {
         if (item.equals("Compromised Product")) {
             throw new TestCompromisedException("Compromised Product exception");
         }
+        if (item.equals("Broken Product")) {
+            throw new AssertionError("Wrong Product");
+        }
         actor.attemptsTo(AddToCart.item(item));
     }
 

@@ -3,13 +3,13 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "net.serenity-bdd:serenity-single-page-report:4.2.16"
+        classpath "net.serenity-bdd:serenity-single-page-report:4.2.30"
     }
 }
 
 plugins {
     id 'java'
-    id 'net.serenity-bdd.serenity-gradle-plugin' version '4.2.16'
+    id 'net.serenity-bdd.serenity-gradle-plugin' version '4.2.30'
 }
 
 group = 'net.serenitybdd.swaglabs'
@@ -22,10 +22,10 @@ repositories {
 }
 
 ext {
-    serenityVersion = '4.2.16'
-    junitVersion = '5.11.4'
-    junitPlatformVersion = '1.11.4'
-    cucumberVersion = '7.20.1'
+    serenityVersion = '4.2.30'
+    junitVersion = '5.12.2'
+    junitPlatformVersion = '1.12.2'
+    cucumberVersion = '7.22.2'
 }
 
 configurations {

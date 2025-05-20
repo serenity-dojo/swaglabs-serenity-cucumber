@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        plugin = {"pretty"},
+        plugin = {"progress"},
         features = "src/test/resources/features/cart",
         glue = {"swaglabs"}
 )

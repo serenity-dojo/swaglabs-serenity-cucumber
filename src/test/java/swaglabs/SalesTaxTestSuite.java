@@ -13,6 +13,6 @@ import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
 @SelectClasspathResource("/features/sales_tax")
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "swaglabs.stepdefinitions")
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME,
-        value = "io.cucumber.core.plugin.SerenityReporterParallel,pretty,timeline:target/test-results/timeline")
+        value = "io.cucumber.core.plugin.SerenityReporterParallel,progress")
 public class SalesTaxTestSuite {
 }
