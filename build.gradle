@@ -3,13 +3,12 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "net.serenity-bdd:serenity-single-page-report:4.2.30"
+        classpath "net.serenity-bdd:serenity-single-page-report:4.2.22"
     }
 }
-
 plugins {
     id 'java'
-    id 'net.serenity-bdd.serenity-gradle-plugin' version '4.2.30'
+    id 'net.serenity-bdd.serenity-gradle-plugin' version '4.2.22'
 }
 
 group = 'net.serenitybdd.swaglabs'
@@ -22,10 +21,10 @@ repositories {
 }
 
 ext {
-    serenityVersion = '4.2.30'
-    junitVersion = '5.12.2'
-    junitPlatformVersion = '1.12.2'
-    cucumberVersion = '7.22.2'
+    serenityVersion = '4.2.22'
+    junitVersion = '5.11.4'
+    junitPlatformVersion = '1.11.4'
+    cucumberVersion = '7.16.1'
 }
 
 configurations {
@@ -49,6 +48,7 @@ dependencies {
     testImplementation "org.junit.vintage:junit-vintage-engine:${junitVersion}"
 
     testImplementation "io.cucumber:cucumber-junit-platform-engine:${cucumberVersion}"
+    testImplementation 'net.java.dev.jna:jna:5.17.0'
 
     implementation 'ch.qos.logback:logback-classic:1.2.10'
     testImplementation 'org.assertj:assertj-core:3.22.0'
