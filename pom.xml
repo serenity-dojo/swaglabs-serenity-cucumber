@@ -11,15 +11,15 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <serenity.version>4.2.29-SNAPSHOT</serenity.version>
+        <serenity.version>4.3.1</serenity.version>
         <encoding>UTF-8</encoding>
         <tags></tags>
         <webdriver.base.url></webdriver.base.url>
         <browserstack.user></browserstack.user>
         <browserstack.key></browserstack.key>
-        <junit-platform.version>1.12.2</junit-platform.version>
-        <junit-jupiter.version>5.12.2</junit-jupiter.version>
-        <cucumber.version>7.22.2</cucumber.version>
+        <junit-jupiter.version>5.13.0</junit-jupiter.version>
+        <junit-platform.version>1.13.0</junit-platform.version>
+        <cucumber.version>7.31.0</cucumber.version>
     </properties>
     <dependencies>
         <dependency>
