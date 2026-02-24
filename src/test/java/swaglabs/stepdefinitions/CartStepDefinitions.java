@@ -7,6 +7,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import net.serenitybdd.annotations.Steps;
 import net.serenitybdd.model.exceptions.TestCompromisedException;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actions.Click;
@@ -72,10 +73,18 @@ public class CartStepDefinitions {
         );
     }
 
+    @Steps
+    CartSteps cartSteps;
+
     @And("{actor} has the following item(s) in his/her cart:")
     public void addedTheFollowingItemsToTheCart(Actor actor, List<String> items) {
         actor.remember("ITEMS", items);
         actor.has(AShoppingCart.containing(items));
+        cartSteps.addItemsToCart(items);
+
+        if (items.contains("Broken Product")) {
+            throw new IllegalArgumentException("Broken Product exception");
+        }
     }
 
     @And("{actor} has no items in his/her cart")
